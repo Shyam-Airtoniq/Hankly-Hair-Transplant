@@ -3,1304 +3,366 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Euro Hair Transplant — Houston-based concierge for premium European hair restoration. Save thousands while enjoying Europe. Free in-person consultation." />
-<title>Euro Hair Transplant — Restore Confidence. Travel Smart.</title>
+<meta name="description" content="Euro Hair Transplant — Demo concept selection. Two design directions for your review." />
+<title>Euro Hair Transplant — Demo Concepts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 :root{
   --royal:#0057B8;
-  --royal-deep:#003F87;
+  --royal-bright:#0066D9;
   --navy:#002147;
-  --navy-soft:#0a2a55;
-  --white:#FFFFFF;
+  --navy-deep:#020e22;
   --silver:#C0C0C0;
-  --silver-soft:#E6E6E6;
+  --silver-soft:#E6E9EE;
+  --white:#FFFFFF;
   --ink:#0E1B30;
-  --muted:#6B7280;
-  --bg-warm:#FAFBFD;
-  --line:rgba(0,33,71,0.10);
-  --shadow-sm:0 1px 2px rgba(0,33,71,0.06);
-  --shadow-md:0 12px 40px -12px rgba(0,33,71,0.18);
-  --shadow-lg:0 30px 80px -20px rgba(0,33,71,0.25);
   --serif:'Cormorant Garamond', Georgia, serif;
   --sans:'Montserrat', system-ui, sans-serif;
-  --body:'Open Sans', system-ui, sans-serif;
-  --container:1280px;
   --ease:cubic-bezier(.2,.8,.2,1);
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{font-family:var(--body);font-size:17px;line-height:1.7;color:var(--ink);background:var(--white);overflow-x:hidden}
+body{
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--white);
+  background:var(--navy-deep);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(0,87,184,.22) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(0,87,184,.12) 0%, transparent 55%);
+  min-height:100vh;
+  overflow-x:hidden;
+  display:flex;
+  flex-direction:column;
+}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
-ul{list-style:none}
 
-.container{max-width:var(--container);margin:0 auto;padding:0 32px}
-
-/* ============ TYPOGRAPHY ============ */
-.eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--royal);display:inline-flex;align-items:center;gap:14px}
-.eyebrow::before{content:"";width:32px;height:1px;background:var(--royal);display:inline-block}
-.eyebrow.center::after{content:"";width:32px;height:1px;background:var(--royal);display:inline-block}
-.eyebrow.light{color:var(--silver)}
-.eyebrow.light::before,.eyebrow.light::after{background:var(--silver)}
-
-h1,h2,h3,h4{font-family:var(--sans);font-weight:300;color:var(--navy);letter-spacing:-.01em;line-height:1.12}
-h1{font-size:clamp(40px,6.4vw,84px);font-weight:200}
-h2{font-size:clamp(32px,4.4vw,58px);font-weight:300}
-h3{font-size:clamp(22px,2.2vw,30px);font-weight:400}
-h4{font-size:18px;font-weight:500;letter-spacing:.02em}
-
-.serif-accent{font-family:var(--serif);font-style:italic;font-weight:400}
-
-p{font-size:17px;line-height:1.75;color:#384660}
-.lead{font-size:19px;line-height:1.7;color:#475569;max-width:62ch}
-
-/* ============ BUTTONS ============ */
-.btn{display:inline-flex;align-items:center;gap:12px;padding:18px 32px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;border:1px solid transparent;transition:all .4s var(--ease);cursor:pointer;position:relative;overflow:hidden}
-.btn-primary{background:var(--royal);color:var(--white);border-color:var(--royal)}
-.btn-primary:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-1px);box-shadow:0 14px 40px -10px rgba(0,87,184,.45)}
-.btn-ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}
-.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--white)}
-.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
-.btn-outline:hover{background:var(--navy);color:var(--white)}
-.btn .arrow{display:inline-block;transition:transform .4s var(--ease)}
-.btn:hover .arrow{transform:translateX(6px)}
+.shell{flex:1;display:flex;flex-direction:column;padding:48px 36px}
 
 /* ============ HEADER ============ */
-.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;transition:all .5s var(--ease);background:transparent}
-.header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(255,255,255,.12);transition:all .5s var(--ease)}
-.header.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:14px 0;box-shadow:0 1px 0 rgba(0,33,71,.06)}
-.header.scrolled::after{background:transparent}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:32px}
-.logo{display:inline-flex;align-items:center;flex-shrink:0;text-decoration:none}
-.logo-mark{display:flex;flex-direction:column;align-items:flex-start;line-height:1;color:#fff;transition:color .4s var(--ease)}
-.header.scrolled .logo-mark{color:var(--navy)}
-.logo-name{font-family:var(--serif);font-size:30px;font-weight:600;letter-spacing:.05em;line-height:.95}
-.logo-sub{font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;margin-top:6px;line-height:1;opacity:.95}
-.header.scrolled .logo-name{color:var(--royal)}
-.header.scrolled .logo-sub{color:var(--navy)}
-.footer .logo-mark{color:#fff}
-.footer .logo-name{color:#fff}
-.footer .logo-sub{color:rgba(255,255,255,.7)}
-.nav{display:flex;align-items:center;gap:38px}
-.nav a{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--white);position:relative;padding:6px 0;transition:color .3s var(--ease)}
-.header.scrolled .nav a{color:var(--navy)}
-.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;transition:width .35s var(--ease)}
-.nav a:hover::after{width:100%}
-.header-cta{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(255,255,255,.55);color:var(--white);transition:all .4s var(--ease)}
-.header.scrolled .header-cta{border-color:var(--royal);color:var(--royal);background:transparent}
-.header-cta:hover{background:var(--white);color:var(--navy);border-color:var(--white)}
-.header.scrolled .header-cta:hover{background:var(--royal);color:var(--white)}
-.menu-toggle{display:none;width:32px;height:32px;flex-direction:column;justify-content:center;align-items:flex-end;gap:5px;cursor:pointer}
-.menu-toggle span{display:block;height:1.5px;background:var(--white);transition:all .35s var(--ease)}
-.menu-toggle span:nth-child(1){width:24px}
-.menu-toggle span:nth-child(2){width:18px}
-.header.scrolled .menu-toggle span{background:var(--navy)}
-.menu-toggle.open span:nth-child(1){transform:translateY(3.5px) rotate(45deg);width:24px}
-.menu-toggle.open span:nth-child(2){transform:translateY(-3.5px) rotate(-45deg);width:24px}
+.brand-bar{display:flex;justify-content:space-between;align-items:center;max-width:1320px;margin:0 auto 80px;width:100%}
+.brand-mark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.brand-name{font-family:var(--serif);font-size:30px;font-weight:600;letter-spacing:.04em;color:var(--white);line-height:.95}
+.brand-sub{font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;margin-top:6px;line-height:1;color:rgba(255,255,255,.7)}
+.brand-meta{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);display:inline-flex;align-items:center;gap:10px}
+.brand-meta .dot{width:6px;height:6px;border-radius:50%;background:#7ea7d8;display:inline-block;box-shadow:0 0 0 4px rgba(126,167,216,.18)}
 
-/* ============ HERO ============ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:var(--white);overflow:hidden;background:var(--navy)}
-.hero-bg{position:absolute;inset:0;z-index:1}
-.hero-bg::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,33,71,.55) 0%,rgba(0,33,71,.78) 60%,rgba(0,33,71,.95) 100%);z-index:2}
-.hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%, rgba(0,87,184,.35) 0%, transparent 60%);z-index:2;mix-blend-mode:screen}
-.hero-bg img{width:100%;height:100%;object-fit:cover;animation:slowZoom 20s ease-out infinite alternate}
-@keyframes slowZoom{0%{transform:scale(1.04) translateY(0)}100%{transform:scale(1.12) translateY(-1.5%)}}
-.hero-content{position:relative;z-index:3;width:100%;padding:140px 0 90px}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:50px;align-items:end}
-.hero-headline{max-width:980px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:30px}
-.hero-eyebrow::before{content:"";width:34px;height:1px;background:var(--silver)}
-.hero h1{color:var(--white);font-weight:200;line-height:1.05;letter-spacing:-.015em}
-.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#cbd9ee}
-.hero-sub{margin-top:32px;font-size:18px;line-height:1.75;color:rgba(255,255,255,.78);max-width:620px}
-.hero-actions{margin-top:44px;display:flex;flex-wrap:wrap;gap:18px}
-.hero-trust{margin-top:60px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:36px 48px;max-width:780px}
-.hero-trust-item{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-.hero-trust-item svg{flex-shrink:0;width:16px;height:16px;color:#7ea7d8}
-.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:14px;color:rgba(255,255,255,.65);font-family:var(--sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase}
-.hero-scroll-line{width:1px;height:40px;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0));position:relative;overflow:hidden}
-.hero-scroll-line::after{content:"";position:absolute;top:-40px;left:0;width:1px;height:40px;background:rgba(255,255,255,.95);animation:scrollLine 2.4s ease-in-out infinite}
-@keyframes scrollLine{0%{top:-40px}100%{top:40px}}
+/* ============ INTRO ============ */
+.intro{max-width:880px;margin:0 auto;text-align:center;margin-bottom:80px}
+.intro-eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#7ea7d8;margin-bottom:32px}
+.intro-eyebrow::before,.intro-eyebrow::after{content:"";width:34px;height:1px;background:#7ea7d8;display:inline-block;opacity:.5}
+.intro h1{font-family:var(--sans);font-weight:200;font-size:clamp(40px,5.4vw,68px);line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:24px}
+.intro h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#cbd9ee}
+.intro p{font-size:17px;line-height:1.7;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto}
 
-/* ============ TRUST BAR ============ */
-.trust-bar{padding:36px 0;background:var(--white);border-bottom:1px solid var(--line)}
-.trust-bar-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
-.trust-pill{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
-.trust-pill svg{width:14px;height:14px;color:var(--royal)}
-.trust-divider{width:1px;height:18px;background:var(--silver-soft)}
+/* ============ CONCEPTS ============ */
+.concepts{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1320px;margin:0 auto;width:100%}
+.concept-card{
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  overflow:hidden;
+  transition:all .55s var(--ease);
+  cursor:pointer;
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.concept-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(0,87,184,.5);
+  background:rgba(255,255,255,.04);
+  box-shadow:0 40px 80px -20px rgba(0,0,0,.5), 0 0 0 1px rgba(0,87,184,.15);
+}
+.concept-thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#1a3556,#0a2a55)}
+.concept-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(2,14,34,.85) 100%);z-index:2}
+.concept-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);filter:saturate(.95) brightness(.92)}
+.concept-card:hover .concept-thumb img{transform:scale(1.06)}
 
-/* ============ SECTION BASE ============ */
-.section{padding:140px 0;position:relative}
-.section-tight{padding:100px 0}
-.section-warm{background:var(--bg-warm)}
-.section-navy{background:var(--navy);color:var(--white)}
-.section-navy h1,.section-navy h2,.section-navy h3{color:var(--white)}
-.section-navy p{color:rgba(255,255,255,.78)}
-.section-head{max-width:760px;margin-bottom:80px}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.section-head .eyebrow{margin-bottom:24px}
-.section-head h2{margin-bottom:24px}
-.section-head h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--royal)}
+.concept-letter{
+  position:absolute;
+  top:24px;
+  left:24px;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--serif);
+  font-size:26px;
+  font-style:italic;
+  font-weight:500;
+  color:var(--navy);
+  z-index:3;
+  letter-spacing:-.02em;
+}
+.concept-tag{
+  position:absolute;
+  top:32px;
+  right:24px;
+  background:rgba(0,33,71,.72);
+  backdrop-filter:blur(10px);
+  color:var(--white);
+  padding:8px 14px;
+  border-radius:999px;
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  z-index:3;
+  border:1px solid rgba(255,255,255,.15);
+}
 
-/* ============ WHY CHOOSE ============ */
-.why{position:relative}
-.why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:start}
-.why-text h2{margin-bottom:28px}
-.why-text p{margin-bottom:20px}
-.why-stats{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid var(--line);padding-top:36px}
-.why-stat{padding-right:16px;border-right:1px solid var(--line)}
-.why-stat:last-child{border-right:none}
-.why-stat-num{font-family:var(--sans);font-size:42px;font-weight:200;color:var(--royal);letter-spacing:-.02em;line-height:1}
-.why-stat-num span{font-size:24px;color:var(--navy)}
-.why-stat-label{margin-top:10px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.concept-body{padding:40px 40px 36px;display:flex;flex-direction:column;flex:1}
+.concept-style{
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#7ea7d8;
+  margin-bottom:14px;
+}
+.concept-card h2{
+  font-family:var(--sans);
+  font-size:30px;
+  font-weight:300;
+  line-height:1.15;
+  color:var(--white);
+  margin-bottom:18px;
+  letter-spacing:-.01em;
+}
+.concept-card h2 em{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+  color:#cbd9ee;
+}
+.concept-desc{
+  font-size:15px;
+  line-height:1.65;
+  color:rgba(255,255,255,.65);
+  margin-bottom:28px;
+  font-weight:400;
+}
+.concept-feats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:32px;
+}
+.concept-feat{
+  padding:6px 12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:500;
+  color:rgba(255,255,255,.75);
+  letter-spacing:.02em;
+}
+.concept-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 24px;
+  background:transparent;
+  border:1.5px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--white);
+  transition:all .35s var(--ease);
+  align-self:flex-start;
+  margin-top:auto;
+}
+.concept-card:hover .concept-cta{
+  background:var(--royal);
+  border-color:var(--royal);
+  gap:16px;
+}
+.concept-cta .arrow{
+  display:inline-block;
+  transition:transform .35s var(--ease);
+  font-size:14px;
+}
 
-.assist-card{background:var(--white);padding:48px 44px;border:1px solid var(--line);position:relative}
-.assist-card::before{content:"";position:absolute;top:0;left:0;width:60px;height:1px;background:var(--royal)}
-.assist-card h3{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--royal);margin-bottom:32px}
-.assist-list{display:flex;flex-direction:column;gap:18px}
-.assist-item{display:flex;align-items:center;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);transition:padding .3s var(--ease)}
-.assist-item:last-child{border-bottom:none}
-.assist-item:hover{padding-left:8px}
-.assist-num{font-family:var(--sans);font-size:11px;font-weight:500;color:var(--silver);letter-spacing:.15em;width:24px;flex-shrink:0}
-.assist-text{font-family:var(--sans);font-size:15px;font-weight:400;color:var(--navy)}
-
-/* ============ COST SAVINGS ============ */
-.cost{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
-.cost::before{content:"";position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, rgba(0,87,184,.25) 0%, transparent 70%);pointer-events:none}
-.cost::after{content:"";position:absolute;bottom:-300px;left:-300px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle, rgba(0,87,184,.18) 0%, transparent 70%);pointer-events:none}
-.cost .container{position:relative;z-index:2}
-.cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.cost h2{color:var(--white);margin-bottom:24px}
-.cost h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#7ea7d8}
-.cost p{color:rgba(255,255,255,.78);margin-bottom:18px}
-.cost-compare{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);padding:48px 44px;backdrop-filter:blur(10px)}
-.cost-compare h4{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--silver);margin-bottom:36px}
-.cost-row{display:flex;justify-content:space-between;align-items:flex-end;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.10)}
-.cost-row:last-child{border-bottom:none;padding-top:30px}
-.cost-row-label{font-family:var(--sans);font-size:13px;font-weight:400;color:rgba(255,255,255,.7);letter-spacing:.04em}
-.cost-row-val{font-family:var(--sans);font-size:30px;font-weight:200;color:var(--white);letter-spacing:-.01em}
-.cost-row.savings .cost-row-label{color:#7ea7d8;text-transform:uppercase;font-size:11px;letter-spacing:.22em;font-weight:500}
-.cost-row.savings .cost-row-val{color:#fff;font-size:42px;font-weight:300}
-.cost-row.savings .cost-row-val span{color:#7ea7d8;font-size:18px;font-weight:400;margin-right:6px;vertical-align:middle}
-.cost-disclaimer{margin-top:28px;font-size:12px;color:rgba(255,255,255,.5);font-style:italic;line-height:1.7}
-.cost-perks{margin-top:36px;display:flex;flex-direction:column;gap:14px}
-.cost-perk{display:flex;align-items:center;gap:14px;font-family:var(--sans);font-size:14px;color:rgba(255,255,255,.85)}
-.cost-perk svg{width:14px;height:14px;color:#7ea7d8;flex-shrink:0}
-
-/* ============ VACATION ============ */
-.vacation{background:var(--bg-warm)}
-.vacation-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:90px;align-items:center}
-.vacation-imgs{position:relative;height:580px}
-.vacation-img{position:absolute;overflow:hidden;box-shadow:var(--shadow-lg)}
-.vacation-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
-.vacation-img:hover img{transform:scale(1.05)}
-.vacation-img-1{top:0;left:0;width:62%;height:72%;background:linear-gradient(135deg,#3a5a85,#0a2a55)}
-.vacation-img-2{bottom:0;right:0;width:58%;height:62%;background:linear-gradient(135deg,#8aa3c4,#3a5a85);border:8px solid var(--bg-warm)}
-.vacation-text h2{margin-bottom:28px}
-.vacation-text h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--royal)}
-.vacation-list{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px 32px}
-.vacation-item{display:flex;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
-.vacation-item-icon{width:36px;height:36px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--royal)}
-.vacation-item-icon svg{width:16px;height:16px}
-.vacation-item-text{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--navy);letter-spacing:.02em}
-.vacation-quote{margin-top:50px;padding:32px 36px;border-left:2px solid var(--royal);background:var(--white);font-family:var(--serif);font-size:22px;font-style:italic;line-height:1.5;color:var(--navy)}
-
-/* ============ TREATMENTS ============ */
-.treatments-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.treatment{padding:56px 44px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;transition:all .45s var(--ease);background:var(--white);cursor:default}
-.treatment::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--royal);transition:width .55s var(--ease)}
-.treatment:hover{background:var(--bg-warm);transform:translateY(-2px)}
-.treatment:hover::before{width:100%}
-.treatment-num{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;color:var(--silver);margin-bottom:32px}
-.treatment-icon{width:44px;height:44px;color:var(--royal);margin-bottom:28px}
-.treatment-icon svg{width:100%;height:100%}
-.treatment h3{margin-bottom:18px;font-weight:400}
-.treatment p{font-size:15px;line-height:1.7;color:#475569;margin-bottom:24px}
-.treatment-link{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--royal);transition:gap .3s var(--ease)}
-.treatment:hover .treatment-link{gap:14px}
-.treatments-disclaimer{margin-top:50px;font-size:13px;color:var(--muted);font-style:italic;text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
-
-/* ============ HOW IT WORKS ============ */
-.steps{position:relative}
-.steps-list{position:relative;max-width:920px;margin:0 auto}
-.steps-list::before{content:"";position:absolute;left:42px;top:30px;bottom:30px;width:1px;background:linear-gradient(180deg,var(--royal),var(--silver));opacity:.4}
-.step{display:grid;grid-template-columns:84px 1fr;gap:40px;padding:40px 0;align-items:start;position:relative}
-.step + .step{border-top:1px solid var(--line)}
-.step-num{width:84px;height:84px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:14px;font-weight:500;color:var(--royal);letter-spacing:.18em;position:relative;z-index:2;transition:all .5s var(--ease)}
-.step-num span{font-family:var(--serif);font-size:34px;font-style:italic;font-weight:400;color:var(--navy)}
-.step:hover .step-num{background:var(--royal);border-color:var(--royal);transform:scale(1.04)}
-.step:hover .step-num span{color:var(--white)}
-.step-body{padding-top:14px}
-.step-label{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--royal);margin-bottom:14px}
-.step h3{margin-bottom:14px;font-weight:400}
-.step p{font-size:16px;line-height:1.75;color:#475569;max-width:62ch}
-
-/* ============ TRAVEL SUPPORT ============ */
-.travel{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
-.travel-bg{position:absolute;inset:0;opacity:.15;z-index:1}
-.travel-bg img{width:100%;height:100%;object-fit:cover}
-.travel-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,rgba(0,33,71,.85) 50%,rgba(0,33,71,.7) 100%)}
-.travel .container{position:relative;z-index:2}
-.travel-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.travel h2{color:var(--white);margin-bottom:24px}
-.travel h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#7ea7d8}
-.travel p{color:rgba(255,255,255,.78)}
-.travel-airlines{display:flex;flex-direction:column;gap:0;margin-top:8px}
-.airline{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.12)}
-.airline:first-child{border-top:1px solid rgba(255,255,255,.12)}
-.airline-name{font-family:var(--sans);font-size:18px;font-weight:300;color:var(--white);letter-spacing:.01em}
-.airline-route{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#7ea7d8}
-
-/* ============ LOCAL TRUST ============ */
-.local{background:var(--white)}
-.local-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
-.local-img{aspect-ratio:4/5;overflow:hidden;background:linear-gradient(135deg,#3a5a85,#0a2a55);box-shadow:var(--shadow-lg);position:relative}
-.local-img img{width:100%;height:100%;object-fit:cover}
-.local-badge{position:absolute;bottom:24px;left:24px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);padding:18px 24px;border-left:2px solid var(--royal)}
-.local-badge-label{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.local-badge-value{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--navy)}
-.local-text h2{margin-bottom:28px}
-.local-text h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--royal)}
-.local-points{margin-top:36px;display:grid;gap:16px}
-.local-point{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
-.local-point-num{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--royal);width:32px;flex-shrink:0;line-height:1}
-.local-point-text{font-family:var(--sans);font-size:15px;color:var(--navy);font-weight:400;line-height:1.6}
-
-/* ============ RESULTS / BEFORE-AFTER ============ */
-.results{background:var(--bg-warm)}
-.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:60px}
-.result-card{position:relative;overflow:hidden;background:var(--white);box-shadow:var(--shadow-md);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.result-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.result-img{aspect-ratio:5/4;overflow:hidden;position:relative;background:linear-gradient(135deg,#bac6d6,#6e84a3)}
-.result-img img{width:100%;height:100%;object-fit:cover}
-.result-tag{position:absolute;top:18px;left:18px;background:rgba(0,33,71,.85);backdrop-filter:blur(8px);color:var(--white);padding:8px 14px;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
-.result-info{padding:30px 32px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line)}
-.result-meta-label{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.result-meta-value{font-family:var(--sans);font-size:14px;color:var(--navy);font-weight:500}
-
-/* ============ TESTIMONIALS ============ */
-.testimonials{background:var(--white);position:relative}
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:80px}
-.testimonial{padding:44px 36px;background:var(--white);border:1px solid var(--line);position:relative;transition:all .5s var(--ease)}
-.testimonial:hover{border-color:var(--royal);box-shadow:var(--shadow-md);transform:translateY(-3px)}
-.testimonial-mark{font-family:var(--serif);font-size:80px;line-height:.7;color:var(--royal);opacity:.2;margin-bottom:16px;font-style:italic}
-.testimonial-text{font-family:var(--serif);font-size:21px;line-height:1.55;color:var(--navy);font-style:italic;font-weight:400;margin-bottom:32px;min-height:140px}
-.testimonial-author{display:flex;align-items:center;gap:16px;padding-top:24px;border-top:1px solid var(--line)}
-.testimonial-avatar{width:50px;height:50px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#bac6d6,#6e84a3);flex-shrink:0}
-.testimonial-avatar img{width:100%;height:100%;object-fit:cover}
-.testimonial-author-name{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--navy);margin-bottom:3px}
-.testimonial-author-meta{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
-.testimonial-rating{display:flex;gap:3px;margin-bottom:18px}
-.testimonial-rating svg{width:14px;height:14px;color:#d4a942}
-
-/* ============ FORM ============ */
-.form-section{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
-.form-section::before{content:"";position:absolute;top:-300px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, rgba(0,87,184,.25) 0%, transparent 65%);pointer-events:none}
-.form-section .container{position:relative;z-index:2}
-.form-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
-.form-text h2{color:var(--white);margin-bottom:24px}
-.form-text h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#7ea7d8}
-.form-text p{color:rgba(255,255,255,.78);margin-bottom:36px;max-width:46ch}
-.form-perks{display:flex;flex-direction:column;gap:18px;margin-top:40px}
-.form-perk{display:flex;align-items:center;gap:16px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.12)}
-.form-perk svg{width:18px;height:18px;color:#7ea7d8;flex-shrink:0}
-.form-perk-label{font-family:var(--sans);font-size:13px;font-weight:400;color:var(--white);letter-spacing:.04em}
-.form-card{background:var(--white);padding:56px 52px;color:var(--ink);position:relative;box-shadow:var(--shadow-lg)}
-.form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--royal)}
-.form-card h3{color:var(--navy);margin-bottom:8px;font-weight:400}
-.form-card-sub{font-size:14px;color:var(--muted);margin-bottom:36px}
-.form-row{display:grid;grid-template-columns:1fr;gap:22px;margin-bottom:22px}
-.form-row.two{grid-template-columns:1fr 1fr}
-.field{display:flex;flex-direction:column;gap:8px}
-.field label{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
-.field input,.field select{font-family:var(--body);font-size:15px;padding:14px 0 12px;border:none;border-bottom:1px solid var(--line);background:transparent;color:var(--navy);transition:border-color .3s var(--ease);outline:none}
-.field input:focus,.field select:focus{border-bottom-color:var(--royal)}
-.form-submit{width:100%;margin-top:18px;padding:20px;background:var(--royal);color:var(--white);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;border:none;cursor:pointer;transition:all .4s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:14px}
-.form-submit:hover{background:var(--navy)}
-.form-fine{margin-top:18px;font-size:11px;color:var(--muted);text-align:center;letter-spacing:.04em}
-
-/* ============ FAQ ============ */
-.faq{background:var(--white)}
-.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}
-.faq-side{position:sticky;top:120px}
-.faq-side h2{margin-bottom:24px}
-.faq-side h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--royal)}
-.faq-list{display:flex;flex-direction:column}
-.faq-item{border-bottom:1px solid var(--line);padding:8px 0}
-.faq-item:first-child{border-top:1px solid var(--line)}
-.faq-q{display:flex;justify-content:space-between;align-items:center;padding:24px 0;cursor:pointer;width:100%;text-align:left;transition:color .3s var(--ease)}
-.faq-q:hover{color:var(--royal)}
-.faq-q-text{font-family:var(--sans);font-size:18px;font-weight:400;color:var(--navy);line-height:1.4;padding-right:24px}
-.faq-q-icon{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease);position:relative}
-.faq-q-icon::before,.faq-q-icon::after{content:"";position:absolute;background:var(--navy);transition:transform .4s var(--ease)}
-.faq-q-icon::before{width:10px;height:1px}
-.faq-q-icon::after{width:1px;height:10px}
-.faq-item.open .faq-q-icon{background:var(--royal);border-color:var(--royal)}
-.faq-item.open .faq-q-icon::before,.faq-item.open .faq-q-icon::after{background:var(--white)}
-.faq-item.open .faq-q-icon::after{transform:rotate(90deg);opacity:0}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
-.faq-a-inner{padding:0 0 28px;font-size:16px;line-height:1.75;color:#475569;max-width:64ch}
-
-/* ============ FINAL CTA ============ */
-.final-cta{background:var(--navy);color:var(--white);position:relative;overflow:hidden;padding:160px 0}
-.final-cta-bg{position:absolute;inset:0;opacity:.18;z-index:1}
-.final-cta-bg img{width:100%;height:100%;object-fit:cover}
-.final-cta-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,33,71,.6) 0%,rgba(0,33,71,.92) 100%)}
-.final-cta .container{position:relative;z-index:2;text-align:center}
-.final-cta h2{color:var(--white);max-width:920px;margin:0 auto 28px;font-size:clamp(36px,5vw,68px)}
-.final-cta h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#7ea7d8}
-.final-cta p{color:rgba(255,255,255,.78);max-width:600px;margin:0 auto 48px}
-.final-cta-actions{display:inline-flex;flex-wrap:wrap;gap:18px;justify-content:center}
+/* ============ NOTE ============ */
+.update-note{
+  max-width:760px;
+  margin:60px auto 0;
+  padding:24px 28px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  text-align:left;
+}
+.update-note-icon{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:rgba(126,167,216,.12);
+  color:#7ea7d8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.update-note-icon svg{width:16px;height:16px}
+.update-note-text{flex:1}
+.update-note-title{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#cbd9ee;margin-bottom:8px}
+.update-note p{font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.65);margin:0}
 
 /* ============ FOOTER ============ */
-.footer{background:#020e22;color:rgba(255,255,255,.7);padding:90px 0 36px;font-size:14px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:60px;margin-bottom:70px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08)}
-.footer-brand .logo-mark{margin-bottom:24px}
-.footer-brand p{color:rgba(255,255,255,.6);font-size:14px;line-height:1.75;max-width:36ch}
-.footer h4{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--white);margin-bottom:24px}
-.footer-links{display:flex;flex-direction:column;gap:14px}
-.footer-links a{color:rgba(255,255,255,.6);font-size:14px;transition:color .3s var(--ease)}
-.footer-links a:hover{color:var(--white)}
-.footer-contact{display:flex;flex-direction:column;gap:16px}
-.footer-contact-item{display:flex;align-items:flex-start;gap:12px;color:rgba(255,255,255,.6);font-size:14px;line-height:1.55}
-.footer-contact-item svg{width:14px;height:14px;color:#7ea7d8;flex-shrink:0;margin-top:4px}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
-.footer-bottom p{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.04em}
-.footer-social{display:flex;gap:12px}
-.footer-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,.15);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);transition:all .3s var(--ease)}
-.footer-social a:hover{background:var(--royal);border-color:var(--royal);color:var(--white)}
-.footer-social svg{width:14px;height:14px}
+.foot{
+  max-width:1320px;
+  margin:80px auto 0;
+  padding-top:36px;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+  width:100%;
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:.04em;
+  color:rgba(255,255,255,.4);
+}
 
-/* ============ ANIMATIONS / REVEAL ============ */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.12s}
-.reveal-delay-2{transition-delay:.22s}
-.reveal-delay-3{transition-delay:.32s}
-
-/* ============ MOBILE NAV PANEL ============ */
-.mobile-nav{position:fixed;top:0;right:0;width:100%;max-width:420px;height:100vh;background:var(--navy);color:var(--white);padding:120px 40px 40px;transform:translateX(100%);transition:transform .55s var(--ease);z-index:99;display:flex;flex-direction:column;gap:30px}
-.mobile-nav.open{transform:translateX(0)}
-.mobile-nav a{font-family:var(--sans);font-size:24px;font-weight:300;color:var(--white);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);letter-spacing:.02em}
-.mobile-nav .header-cta{margin-top:20px;align-self:flex-start;border-color:var(--white);color:var(--white)}
+/* ============ ANIMATIONS ============ */
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.brand-bar{animation:rise .8s var(--ease) both}
+.intro{animation:rise .9s var(--ease) .15s both}
+.concept-card:nth-child(1){animation:rise 1s var(--ease) .3s both}
+.concept-card:nth-child(2){animation:rise 1s var(--ease) .45s both}
+.update-note{animation:rise 1s var(--ease) .6s both}
+.foot{animation:rise 1s var(--ease) .75s both}
 
 /* ============ RESPONSIVE ============ */
-@media (max-width:1080px){
-  .why-grid,.cost-grid,.vacation-grid,.local-grid,.travel-grid,.form-grid,.faq-grid{grid-template-columns:1fr;gap:60px}
-  .treatments-grid{grid-template-columns:repeat(2,1fr)}
-  .testimonials-grid{grid-template-columns:1fr;gap:24px}
-  .vacation-imgs{height:480px}
-  .faq-side{position:static}
-  .why-stats{grid-template-columns:1fr 1fr}
-  .why-stat:nth-child(2){border-right:none}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+@media (max-width:920px){
+  .concepts{grid-template-columns:1fr;gap:24px}
+  .intro{margin-bottom:60px}
+  .brand-bar{margin-bottom:60px}
 }
-@media (max-width:768px){
-  .container{padding:0 22px}
-  .section{padding:90px 0}
-  .nav,.header-cta{display:none}
-  .menu-toggle{display:flex}
-  h1{font-size:46px}
-  h2{font-size:34px}
-  .hero{min-height:auto;padding-top:120px;padding-bottom:90px}
-  .hero-trust{gap:20px 28px}
-  .hero-trust-item{font-size:10px}
-  .trust-bar-inner{justify-content:flex-start;gap:16px}
-  .trust-divider{display:none}
-  .trust-pill{font-size:10px}
-  .why-stats{grid-template-columns:1fr;border-right:none}
-  .why-stat{border-right:none;border-bottom:1px solid var(--line);padding-bottom:24px;padding-right:0}
-  .why-stat:last-child{border-bottom:none}
-  .assist-card{padding:36px 28px}
-  .cost-compare,.form-card{padding:36px 28px}
-  .treatments-grid{grid-template-columns:1fr}
-  .treatment{padding:42px 28px}
-  .step{grid-template-columns:60px 1fr;gap:24px}
-  .step-num{width:60px;height:60px}
-  .step-num span{font-size:24px}
-  .steps-list::before{left:30px}
-  .results-grid{grid-template-columns:1fr;gap:24px}
-  .vacation-imgs{height:380px}
-  .vacation-list{grid-template-columns:1fr}
-  .form-row.two{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr;gap:40px;margin-bottom:40px;padding-bottom:30px}
-  .footer-bottom{flex-direction:column;align-items:flex-start}
-  .final-cta{padding:100px 0}
-  .testimonial-text{min-height:auto}
-  .vacation-img-1{width:75%;height:65%}
-  .vacation-img-2{width:65%;height:55%}
+@media (max-width:640px){
+  .shell{padding:32px 22px}
+  .brand-bar{margin-bottom:48px}
+  .brand-meta{display:none}
+  .intro h1{font-size:38px}
+  .intro p{font-size:15px}
+  .concept-body{padding:30px 28px 28px}
+  .concept-card h2{font-size:24px}
+  .concept-letter{width:48px;height:48px;font-size:22px;top:18px;left:18px}
+  .concept-tag{top:24px;right:18px;font-size:9px;padding:6px 10px}
+  .update-note{flex-direction:column;gap:14px;padding:20px 22px}
+  .foot{flex-direction:column;text-align:center;font-size:10px;letter-spacing:.06em}
 }
 </style>
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
-<header class="header" id="header">
-  <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="Euro Hair Transplant home">
-      <span class="logo-mark">
-        <span class="logo-name">EURO</span>
-        <span class="logo-sub">Hair Transplant</span>
-      </span>
+<div class="shell">
+
+  <header class="brand-bar">
+    <div class="brand-mark">
+      <span class="brand-name">EURO</span>
+      <span class="brand-sub">Hair Transplant</span>
+    </div>
+    <div class="brand-meta">
+      <span class="dot"></span>
+      Demo · Internal Review
+    </div>
+  </header>
+
+  <section class="intro">
+    <span class="intro-eyebrow">Concept Selection</span>
+    <h1>Two design directions, <em>one brand.</em></h1>
+    <p>Choose a concept to view a full one-page preview. Both share the same brand identity, content, and structure — they differ in visual tone, typography, and overall feel.</p>
+  </section>
+
+  <main class="concepts">
+
+    <a href="option-1.html" class="concept-card" aria-label="View Concept A">
+      <div class="concept-thumb">
+        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80" alt="Editorial luxury hospitality preview" onerror="this.style.display='none'" />
+        <span class="concept-letter">A</span>
+        <span class="concept-tag">Original</span>
+      </div>
+      <div class="concept-body">
+        <div class="concept-style">Editorial · Hospitality</div>
+        <h2>Luxury hospitality, <em>European editorial.</em></h2>
+        <p class="concept-desc">A cinematic, magazine-inspired direction — large serif italic accents, deep navy hero, and refined editorial spacing. Reads like a premium hospitality brand (Aman, Six Senses).</p>
+        <div class="concept-feats">
+          <span class="concept-feat">Cinematic Hero</span>
+          <span class="concept-feat">Serif Italic Accents</span>
+          <span class="concept-feat">Editorial Layout</span>
+          <span class="concept-feat">Warm &amp; Refined</span>
+        </div>
+        <span class="concept-cta">View Concept A <span class="arrow">→</span></span>
+      </div>
     </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#why">Why Europe</a>
-      <a href="#treatments">Treatments</a>
-      <a href="#how">How It Works</a>
-      <a href="#travel">Travel Support</a>
-      <a href="#faq">FAQs</a>
-    </nav>
-    <a href="#consult" class="header-cta">Free Consultation</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-  </div>
-</header>
 
-<!-- Mobile nav panel -->
-<div class="mobile-nav" id="mobileNav" aria-hidden="true">
-  <a href="#why" class="mn-link">Why Europe</a>
-  <a href="#treatments" class="mn-link">Treatments</a>
-  <a href="#how" class="mn-link">How It Works</a>
-  <a href="#travel" class="mn-link">Travel Support</a>
-  <a href="#faq" class="mn-link">FAQs</a>
-  <a href="#consult" class="header-cta mn-link">Free Consultation</a>
+    <a href="option-2.html" class="concept-card" aria-label="View Concept B">
+      <div class="concept-thumb">
+        <img src="Images/before and after hair restoration turkey.jpg" alt="Modern clinical luxury preview — before and after" />
+        <span class="concept-letter">B</span>
+        <span class="concept-tag">Latest · Feedback Applied</span>
+      </div>
+      <div class="concept-body">
+        <div class="concept-style">Modern · Clinical Luxury</div>
+        <h2>Confident clinical, <em>results-led.</em></h2>
+        <p class="concept-desc">A bolder, more structured direction — leads with before/after results, sharper typography, and a brighter, more contemporary feel. Closer to a premium aesthetic-clinic brand.</p>
+        <div class="concept-feats">
+          <span class="concept-feat">Before/After Hero</span>
+          <span class="concept-feat">Bold Typography</span>
+          <span class="concept-feat">Stat-Driven</span>
+          <span class="concept-feat">Brighter &amp; Crisp</span>
+        </div>
+        <span class="concept-cta">View Concept B <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+  </main>
+
+  <aside class="update-note">
+    <div class="update-note-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 17h.01"/></svg>
+    </div>
+    <div class="update-note-text">
+      <div class="update-note-title">Client Feedback Status</div>
+      <p><strong style="color:rgba(255,255,255,.85);font-weight:600">Concept A</strong> is the original draft (preserved as-is for reference). <strong style="color:rgba(255,255,255,.85);font-weight:600">Concept B</strong> incorporates the latest round of feedback — Eiffel Tower removed, no Turkey references, before/after imagery in the hero, and a fresh visual direction to compare against.</p>
+    </div>
+  </aside>
+
+  <footer class="foot">
+    <span>© 2026 Euro Hair Transplant · Demo Concept Selection</span>
+    <span>Built for proposal review · Houston, Texas</span>
+  </footer>
+
 </div>
-
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=80" alt="European cityscape at golden hour" onerror="this.style.display='none'" />
-  </div>
-  <div class="container hero-content">
-    <div class="hero-grid">
-      <div class="hero-headline">
-        <span class="hero-eyebrow">Houston-Based · European Clinic Network</span>
-        <h1>Save Thousands on Your Hair Transplant —<br/><em>and turn it into</em> a European vacation.</h1>
-        <p class="hero-sub">Euro Hair Transplant guides Houston clients through carefully selected European clinics for hair restoration — with full travel coordination, personalized matching, and local consultation support.</p>
-        <div class="hero-actions">
-          <a href="#consult" class="btn btn-primary">Book Free Consultation <span class="arrow">→</span></a>
-          <a href="#cost" class="btn btn-ghost">See Pricing Options</a>
-        </div>
-        <div class="hero-trust">
-          <div class="hero-trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Free Houston Consultation
-          </div>
-          <div class="hero-trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Save vs U.S. Pricing
-          </div>
-          <div class="hero-trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Clinic Matching &amp; Scheduling
-          </div>
-          <div class="hero-trust-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Flight &amp; Hotel Guidance
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll" aria-hidden="true">
-    <span>Scroll</span>
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
-
-<!-- ============ TRUST BAR ============ -->
-<section class="trust-bar">
-  <div class="container trust-bar-inner">
-    <div class="trust-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Houston-Based Team
-    </div>
-    <div class="trust-divider"></div>
-    <div class="trust-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      European Clinic Network
-    </div>
-    <div class="trust-divider"></div>
-    <div class="trust-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2 5 5L21 4"/></svg>
-      Travel Support Included
-    </div>
-    <div class="trust-divider"></div>
-    <div class="trust-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      Cost-Saving Options
-    </div>
-    <div class="trust-divider"></div>
-    <div class="trust-pill">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Free Consultation
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY CHOOSE ============ -->
-<section class="section why" id="why">
-  <div class="container">
-    <div class="why-grid">
-      <div class="why-text reveal">
-        <span class="eyebrow">Why Euro Hair Transplant</span>
-        <h2 style="margin-top:24px">Better Value.<br/><em class="serif-accent">Better experience.</em></h2>
-        <p>Hair restoration in the United States can be expensive. Many clients explore Europe for high-quality options that may cost substantially less — even after travel expenses are included.</p>
-        <p>With Euro Hair Transplant, your treatment becomes part of a memorable international trip. We handle the coordination, the clinic vetting, and the details — you focus on the outcome.</p>
-        <div class="why-stats">
-          <div class="why-stat">
-            <div class="why-stat-num">60<span>%</span></div>
-            <div class="why-stat-label">Average Savings*</div>
-          </div>
-          <div class="why-stat">
-            <div class="why-stat-num">12<span>+</span></div>
-            <div class="why-stat-label">Vetted Clinics</div>
-          </div>
-          <div class="why-stat">
-            <div class="why-stat-num">100<span>%</span></div>
-            <div class="why-stat-label">Concierge Support</div>
-          </div>
-        </div>
-      </div>
-      <div class="assist-card reveal reveal-delay-1">
-        <h3>What We Assist With</h3>
-        <ul class="assist-list">
-          <li class="assist-item"><span class="assist-num">01</span><span class="assist-text">In-person consultations in Houston</span></li>
-          <li class="assist-item"><span class="assist-num">02</span><span class="assist-text">Personalized clinic recommendations</span></li>
-          <li class="assist-item"><span class="assist-num">03</span><span class="assist-text">Treatment scheduling &amp; coordination</span></li>
-          <li class="assist-item"><span class="assist-num">04</span><span class="assist-text">Flight planning assistance</span></li>
-          <li class="assist-item"><span class="assist-num">05</span><span class="assist-text">Hotel &amp; accommodation guidance</span></li>
-          <li class="assist-item"><span class="assist-num">06</span><span class="assist-text">Ground transportation arrangement</span></li>
-          <li class="assist-item"><span class="assist-num">07</span><span class="assist-text">Travel itinerary support</span></li>
-          <li class="assist-item"><span class="assist-num">08</span><span class="assist-text">Ongoing communication throughout</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ COST ============ -->
-<section class="section cost" id="cost">
-  <div class="container">
-    <div class="cost-grid">
-      <div class="reveal">
-        <span class="eyebrow light">Cost Comparison</span>
-        <h2 style="margin-top:24px">Why clients travel<br/>abroad for <em class="serif-accent">restoration.</em></h2>
-        <p>Many clients are surprised to learn how much they may save compared with domestic pricing — while accessing experienced European clinics with modern protocols and concierge-level care.</p>
-        <div class="cost-perks">
-          <div class="cost-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Lower overall treatment costs
-          </div>
-          <div class="cost-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Competitive package pricing
-          </div>
-          <div class="cost-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Modern procedures &amp; experienced surgeons
-          </div>
-          <div class="cost-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            European recovery experience included
-          </div>
-          <div class="cost-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            Concierge planning &amp; support
-          </div>
-        </div>
-      </div>
-      <div class="cost-compare reveal reveal-delay-1">
-        <h4>Sample Cost Illustration</h4>
-        <div class="cost-row">
-          <span class="cost-row-label">U.S. Procedure (avg)</span>
-          <span class="cost-row-val">$15,000</span>
-        </div>
-        <div class="cost-row">
-          <span class="cost-row-label">Europe Procedure (avg)</span>
-          <span class="cost-row-val">$4,200</span>
-        </div>
-        <div class="cost-row">
-          <span class="cost-row-label">Flights + Hotel (est.)</span>
-          <span class="cost-row-val">$1,800</span>
-        </div>
-        <div class="cost-row savings">
-          <span class="cost-row-label">You Save</span>
-          <span class="cost-row-val"><span>~</span>$9,000+</span>
-        </div>
-        <p class="cost-disclaimer">Illustrative figures only. Pricing varies by clinic, treatment type, graft count, travel season, and individual needs. Final medical and pricing details are confirmed by the selected clinic.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ VACATION ============ -->
-<section class="section vacation">
-  <div class="container">
-    <div class="vacation-grid">
-      <div class="vacation-imgs reveal">
-        <div class="vacation-img vacation-img-1">
-          <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=1200&q=80" alt="Paris rooftops aerial view" onerror="this.style.display='none'" />
-        </div>
-        <div class="vacation-img vacation-img-2">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Luxury European hotel suite" onerror="this.style.display='none'" />
-        </div>
-      </div>
-      <div class="vacation-text reveal reveal-delay-1">
-        <span class="eyebrow">The Experience</span>
-        <h2 style="margin-top:24px">Restore your hair while <em class="serif-accent">enjoying Europe.</em></h2>
-        <p class="lead">Instead of spending significantly more in the United States, clients pair treatment with a relaxing overseas experience — historic cities, luxury hotels, and a private recovery environment.</p>
-        <div class="vacation-list">
-          <div class="vacation-item">
-            <span class="vacation-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/></svg></span>
-            <span class="vacation-item-text">Historic Cities</span>
-          </div>
-          <div class="vacation-item">
-            <span class="vacation-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v13M9 21V13h6v8M3 10h18"/></svg></span>
-            <span class="vacation-item-text">Luxury Hotels</span>
-          </div>
-          <div class="vacation-item">
-            <span class="vacation-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M3 15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4H3v4zM7 19h2M15 19h2"/></svg></span>
-            <span class="vacation-item-text">Curated Cuisine</span>
-          </div>
-          <div class="vacation-item">
-            <span class="vacation-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
-            <span class="vacation-item-text">Private Recovery</span>
-          </div>
-          <div class="vacation-item">
-            <span class="vacation-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6l2 4-3 2a12 12 0 0 0 6 6l2-3 4 2v6a2 2 0 0 1-2 2A18 18 0 0 1 2 5a2 2 0 0 1 2-2"/></svg></span>
-            <span class="vacation-item-text">24/7 Coordination</span>
-          </div>
-          <div class="vacation-item">
-            <span class="vacation-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></span>
-            <span class="vacation-item-text">Cultural Attractions</span>
-          </div>
-        </div>
-        <div class="vacation-quote">"It's not just treatment — it's an experience worth traveling for."</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TREATMENTS ============ -->
-<section class="section treatments" id="treatments">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow center">Treatment Options</span>
-      <h2 style="margin-top:24px">Hair restoration services<br/>we help you <em class="serif-accent">explore.</em></h2>
-      <p class="lead" style="margin:24px auto 0">Every procedure is performed by licensed European specialists at carefully selected partner clinics. We help match you to the right team for your goals, anatomy, and budget.</p>
-    </div>
-    <div class="treatments-grid">
-      <article class="treatment reveal">
-        <div class="treatment-num">01</div>
-        <div class="treatment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C8 2 4 6 4 11c0 3 2 6 4 7v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3c2-1 4-4 4-7 0-5-4-9-8-9zM9 22h6"/></svg></div>
-        <h3>FUE Hair Transplant</h3>
-        <p>Modern follicular unit extraction performed by experienced European specialists, offering precise, minimally invasive restoration.</p>
-        <a href="#consult" class="treatment-link">Discuss FUE <span>→</span></a>
-      </article>
-      <article class="treatment reveal reveal-delay-1">
-        <div class="treatment-num">02</div>
-        <div class="treatment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg></div>
-        <h3>DHI Hair Transplant</h3>
-        <p>Advanced direct hair implantation using Choi-style implanter pens for refined density and natural-looking direction.</p>
-        <a href="#consult" class="treatment-link">Discuss DHI <span>→</span></a>
-      </article>
-      <article class="treatment reveal reveal-delay-2">
-        <div class="treatment-num">03</div>
-        <div class="treatment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 12c4-6 14-6 18 0M5 16c3-4 11-4 14 0"/></svg></div>
-        <h3>Hairline Restoration</h3>
-        <p>Rebuild a natural-looking frontal hairline with attention to angle, density, and the contours that define your face.</p>
-        <a href="#consult" class="treatment-link">Discuss Hairline <span>→</span></a>
-      </article>
-      <article class="treatment reveal">
-        <div class="treatment-num">04</div>
-        <div class="treatment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 1 0 18M3 12h18"/></svg></div>
-        <h3>Crown Restoration</h3>
-        <p>Targeted solutions for thinning crown areas, restoring volume and uniform coverage in the most visible region of the scalp.</p>
-        <a href="#consult" class="treatment-link">Discuss Crown <span>→</span></a>
-      </article>
-      <article class="treatment reveal reveal-delay-1">
-        <div class="treatment-num">05</div>
-        <div class="treatment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2a4 4 0 0 1 4 4v3a8 8 0 0 1-8 0V6a4 4 0 0 1 4-4zM6 14c0 4 3 8 6 8s6-4 6-8M9 14h6"/></svg></div>
-        <h3>Beard Transplant</h3>
-        <p>Facial hair enhancement options abroad — fuller, more defined beards using the same precision techniques as scalp restoration.</p>
-        <a href="#consult" class="treatment-link">Discuss Beard <span>→</span></a>
-      </article>
-      <article class="treatment reveal reveal-delay-2">
-        <div class="treatment-num">06</div>
-        <div class="treatment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v6M5 5l4 4M19 5l-4 4M3 13h6M21 13h-6M5 21l4-4M19 21l-4-4M12 22v-6"/></svg></div>
-        <h3>Corrective Procedures</h3>
-        <p>Explore options for previous transplant correction or revision work with surgeons experienced in repair scenarios.</p>
-        <a href="#consult" class="treatment-link">Discuss Correction <span>→</span></a>
-      </article>
-    </div>
-    <p class="treatments-disclaimer">Final medical recommendations and treatment plans are determined by licensed clinical professionals at the selected partner clinic.</p>
-  </div>
-</section>
-
-<!-- ============ HOW IT WORKS ============ -->
-<section class="section steps section-warm" id="how">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow center">How It Works</span>
-      <h2 style="margin-top:24px">Your stress-free<br/><em class="serif-accent">restoration journey.</em></h2>
-    </div>
-    <div class="steps-list">
-      <div class="step reveal">
-        <div class="step-num"><span>I</span></div>
-        <div class="step-body">
-          <div class="step-label">Step One</div>
-          <h3>Meet With Us in Houston</h3>
-          <p>Sit down face-to-face with our Houston team to discuss your goals, concerns, budget, and timeline. No pressure — just clear answers and an honest assessment of your options.</p>
-        </div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num"><span>II</span></div>
-        <div class="step-body">
-          <div class="step-label">Step Two</div>
-          <h3>Personalized Clinic Matching</h3>
-          <p>We recommend two or three suitable European clinic options based on your needs, anatomy, surgeon specialty, language preferences, and overall fit.</p>
-        </div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num"><span>III</span></div>
-        <div class="step-body">
-          <div class="step-label">Step Three</div>
-          <h3>Travel &amp; Treatment Planning</h3>
-          <p>We assist with scheduling, flights, accommodations, and all trip logistics — from airport pickup to recovery-stay recommendations near the clinic.</p>
-        </div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num"><span>IV</span></div>
-        <div class="step-body">
-          <div class="step-label">Step Four</div>
-          <h3>Travel With Confidence</h3>
-          <p>Arrive prepared, fully briefed, and supported by your concierge contact. Treatment day, recovery, and your time abroad become a curated experience — not a logistical scramble.</p>
-        </div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num"><span>V</span></div>
-        <div class="step-body">
-          <div class="step-label">Step Five</div>
-          <h3>Return With Renewed Confidence</h3>
-          <p>We remain in touch throughout your healing journey — answering questions, coordinating follow-ups, and ensuring the long-term result lives up to the promise.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TRAVEL SUPPORT ============ -->
-<section class="section travel" id="travel">
-  <div class="travel-bg">
-    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=80" alt="" onerror="this.style.display='none'" />
-  </div>
-  <div class="container">
-    <div class="travel-grid">
-      <div class="reveal">
-        <span class="eyebrow light">Travel Support</span>
-        <h2 style="margin-top:24px">Convenient routes,<br/><em class="serif-accent">premium carriers.</em></h2>
-        <p>Many of our clients travel through major international airlines including Turkish Airlines and other leading carriers offering convenient routes from Houston to Europe.</p>
-        <p>We help simplify the entire process — from booking guidance and seat preferences to airport coordination and ground transportation on arrival.</p>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="travel-airlines">
-          <div class="airline">
-            <span class="airline-name">Turkish Airlines</span>
-            <span class="airline-route">IAH → IST</span>
-          </div>
-          <div class="airline">
-            <span class="airline-name">Lufthansa</span>
-            <span class="airline-route">IAH → FRA → EU</span>
-          </div>
-          <div class="airline">
-            <span class="airline-name">British Airways</span>
-            <span class="airline-route">IAH → LHR → EU</span>
-          </div>
-          <div class="airline">
-            <span class="airline-name">Air France</span>
-            <span class="airline-route">IAH → CDG → EU</span>
-          </div>
-          <div class="airline">
-            <span class="airline-name">KLM Royal Dutch</span>
-            <span class="airline-route">IAH → AMS → EU</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LOCAL TRUST ============ -->
-<section class="section local">
-  <div class="container">
-    <div class="local-grid">
-      <div class="local-img reveal">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Modern Houston consultation office" onerror="this.style.display='none'" />
-        <div class="local-badge">
-          <div class="local-badge-label">Houston · Texas</div>
-          <div class="local-badge-value">In-Person Consultation</div>
-        </div>
-      </div>
-      <div class="local-text reveal reveal-delay-1">
-        <span class="eyebrow">Local Trust</span>
-        <h2 style="margin-top:24px">Houston clients prefer<br/><em class="serif-accent">in-person guidance first.</em></h2>
-        <p class="lead">Before traveling overseas, meet locally with the Euro Hair Transplant team in Houston to ask questions, compare pricing, and understand your options — face-to-face.</p>
-        <div class="local-points">
-          <div class="local-point">
-            <span class="local-point-num">i.</span>
-            <span class="local-point-text">A no-pressure environment to ask anything — from medical questions to travel logistics.</span>
-          </div>
-          <div class="local-point">
-            <span class="local-point-num">ii.</span>
-            <span class="local-point-text">Clear, transparent pricing comparisons before any decision is made.</span>
-          </div>
-          <div class="local-point">
-            <span class="local-point-num">iii.</span>
-            <span class="local-point-text">A trusted local point of contact through every step of your journey abroad.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ RESULTS ============ -->
-<section class="section results">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow center">Transformations</span>
-      <h2 style="margin-top:24px">Real results from<br/><em class="serif-accent">our partner clinics.</em></h2>
-      <p class="lead" style="margin:24px auto 0">Documented patient outcomes from our European partner network. Final results vary based on individual factors, graft count, and recovery.</p>
-    </div>
-    <div class="results-grid">
-      <article class="result-card reveal">
-        <div class="result-img">
-          <img src="Images/before and after hair restoration turkey.jpg" alt="Crown restoration before and after" />
-          <span class="result-tag">Crown · 3,400 grafts</span>
-        </div>
-        <div class="result-info">
-          <div>
-            <div class="result-meta-label">Treatment</div>
-            <div class="result-meta-value">FUE — Crown Restoration</div>
-          </div>
-          <div style="text-align:right">
-            <div class="result-meta-label">Timeline</div>
-            <div class="result-meta-value">10 Months</div>
-          </div>
-        </div>
-      </article>
-      <article class="result-card reveal reveal-delay-1">
-        <div class="result-img">
-          <img src="Images/hair-transplants-before-during-after-the-private-clinic-web.jpg" alt="Multi-stage hair restoration documentation" />
-          <span class="result-tag">Multi-Stage Documentation</span>
-        </div>
-        <div class="result-info">
-          <div>
-            <div class="result-meta-label">Treatment</div>
-            <div class="result-meta-value">Before · During · After</div>
-          </div>
-          <div style="text-align:right">
-            <div class="result-meta-label">Timeline</div>
-            <div class="result-meta-value">12 Months</div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="section testimonials">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow center">Client Stories</span>
-      <h2 style="margin-top:24px">Confidence, restored.<br/><em class="serif-accent">Trips to remember.</em></h2>
-    </div>
-    <div class="testimonials-grid">
-      <article class="testimonial reveal">
-        <div class="testimonial-rating">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-        </div>
-        <div class="testimonial-mark">"</div>
-        <p class="testimonial-text">Saved over $9,000 versus the Houston quotes I had on the table — and got to spend a week in Istanbul. The team handled every detail, top to bottom.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="" onerror="this.style.display='none'" />
-          </div>
-          <div>
-            <div class="testimonial-author-name">Marcus D.</div>
-            <div class="testimonial-author-meta">Houston · FUE · 3,200 grafts</div>
-          </div>
-        </div>
-      </article>
-      <article class="testimonial reveal reveal-delay-1">
-        <div class="testimonial-rating">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-        </div>
-        <div class="testimonial-mark">"</div>
-        <p class="testimonial-text">I was nervous about going abroad. The in-person Houston consult and the personal handoff at the clinic made it feel like a concierge service — not a referral.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="" onerror="this.style.display='none'" />
-          </div>
-          <div>
-            <div class="testimonial-author-name">James R.</div>
-            <div class="testimonial-author-meta">The Woodlands · DHI · Crown</div>
-          </div>
-        </div>
-      </article>
-      <article class="testimonial reveal reveal-delay-2">
-        <div class="testimonial-rating">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-        </div>
-        <div class="testimonial-mark">"</div>
-        <p class="testimonial-text">Five months later, my hairline is exactly what I asked for. My wife still says the Vienna trip was the best part of the whole thing.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80" alt="" onerror="this.style.display='none'" />
-          </div>
-          <div>
-            <div class="testimonial-author-name">Anthony L.</div>
-            <div class="testimonial-author-meta">Sugar Land · Hairline Restoration</div>
-          </div>
-        </div>
-      </article>
-    </div>
-    <p style="text-align:center;margin-top:60px;font-size:12px;color:var(--muted);font-style:italic">Demo testimonials shown for illustrative purposes. Real client stories will be featured at launch.</p>
-  </div>
-</section>
-
-<!-- ============ CONSULTATION FORM ============ -->
-<section class="section form-section" id="consult">
-  <div class="container">
-    <div class="form-grid">
-      <div class="form-text reveal">
-        <span class="eyebrow light">Free Consultation</span>
-        <h2 style="margin-top:24px">Book your free<br/>in-person <em class="serif-accent">consultation.</em></h2>
-        <p>Meet with our Houston team to discuss treatment options, pricing, savings potential, travel coordination, and your next steps — all in a no-pressure environment.</p>
-        <div class="form-perks">
-          <div class="form-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            <span class="form-perk-label">Free Consultation — No Obligation</span>
-          </div>
-          <div class="form-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            <span class="form-perk-label">Meet Locally in Houston, Texas</span>
-          </div>
-          <div class="form-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            <span class="form-perk-label">Personalized Clinic Matching</span>
-          </div>
-          <div class="form-perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
-            <span class="form-perk-label">Transparent Pricing &amp; Savings</span>
-          </div>
-        </div>
-      </div>
-      <div class="form-card reveal reveal-delay-1">
-        <h3>Schedule Your Visit</h3>
-        <p class="form-card-sub">We'll respond within one business day to confirm your preferred time.</p>
-        <form id="consultForm" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="fullName">Full Name</label>
-              <input id="fullName" type="text" name="fullName" required />
-            </div>
-          </div>
-          <div class="form-row two">
-            <div class="field">
-              <label for="phone">Phone Number</label>
-              <input id="phone" type="tel" name="phone" required />
-            </div>
-            <div class="field">
-              <label for="email">Email Address</label>
-              <input id="email" type="email" name="email" required />
-            </div>
-          </div>
-          <div class="form-row two">
-            <div class="field">
-              <label for="day">Preferred Day</label>
-              <select id="day" name="day">
-                <option value="">Select a day</option>
-                <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
-                <option>Thursday</option><option>Friday</option><option>Saturday</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="time">Preferred Time</label>
-              <select id="time" name="time">
-                <option value="">Select a time</option>
-                <option>Morning (9–12)</option>
-                <option>Afternoon (12–4)</option>
-                <option>Evening (4–7)</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="form-submit">Schedule My Consultation <span class="arrow">→</span></button>
-          <p class="form-fine">Your information is kept private and used only for consultation scheduling.</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="section faq" id="faq">
-  <div class="container">
-    <div class="faq-grid">
-      <aside class="faq-side reveal">
-        <span class="eyebrow">Frequently Asked</span>
-        <h2 style="margin-top:24px">Answers to the<br/>questions we hear <em class="serif-accent">most often.</em></h2>
-        <p style="margin-top:24px">Don't see what you're looking for? Bring it to your free consultation — we'll walk through it in person.</p>
-        <a href="#consult" class="btn btn-outline" style="margin-top:32px">Book Consultation <span class="arrow">→</span></a>
-      </aside>
-      <div class="faq-list reveal reveal-delay-1">
-        <div class="faq-item">
-          <button class="faq-q" type="button">
-            <span class="faq-q-text">Can I really save money by going abroad?</span>
-            <span class="faq-q-icon"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Many clients save thousands depending on treatment type, clinic selection, graft count, and travel costs. We provide a transparent pricing comparison during your free Houston consultation so you know what to expect before any commitment.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button">
-            <span class="faq-q-text">Do you perform the procedure directly?</span>
-            <span class="faq-q-icon"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">No. All medical procedures are performed by licensed surgeons and clinical teams at our European partner clinics. Euro Hair Transplant operates as a Houston-based concierge — we educate, match, and coordinate.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button">
-            <span class="faq-q-text">What does Euro Hair Transplant actually do?</span>
-            <span class="faq-q-icon"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">We coordinate consultations, match clients to suitable European clinics, and handle the full travel and treatment-planning process — including scheduling, flight guidance, accommodations, and ongoing communication throughout your journey.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button">
-            <span class="faq-q-text">Do you book flights and hotels for me?</span>
-            <span class="faq-q-icon"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">We guide and coordinate travel logistics — including airline recommendations, hotel guidance near partner clinics, and ground transportation planning. Final bookings are made with full transparency on cost and itinerary.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button">
-            <span class="faq-q-text">Why meet in person first?</span>
-            <span class="faq-q-icon"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Hair restoration is a meaningful decision — and so is international travel. Our Houston clients consistently tell us that meeting face-to-face before any decision builds the trust they need to confidently move forward.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button">
-            <span class="faq-q-text">Are results guaranteed?</span>
-            <span class="faq-q-icon"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">No legitimate medical procedure can guarantee a specific outcome. What we can guarantee is rigorous clinic vetting, transparent expectations, and a concierge experience designed around your comfort and safety throughout the journey.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button">
-            <span class="faq-q-text">How long does the trip typically take?</span>
-            <span class="faq-q-icon"></span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">Most clients plan a 5 to 7 day trip — including pre-op consultation, the procedure itself, and an initial recovery period before returning home. We help structure the schedule so you have time to enjoy the destination.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="final-cta">
-  <div class="final-cta-bg">
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=80" alt="" onerror="this.style.display='none'" />
-  </div>
-  <div class="container">
-    <span class="eyebrow light center" style="display:inline-flex">The Decision</span>
-    <h2 style="margin-top:32px">Save money. Restore confidence.<br/><em class="serif-accent">Enjoy the journey.</em></h2>
-    <p>Meet with Euro Hair Transplant in Houston and let us guide every step of the process — from your first question to your final follow-up.</p>
-    <div class="final-cta-actions">
-      <a href="#consult" class="btn btn-primary">Book Free Consultation <span class="arrow">→</span></a>
-      <a href="tel:+17135550100" class="btn btn-ghost">Call (713) 555-0100</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="logo-mark" style="margin-bottom:24px">
-          <span class="logo-name">EURO</span>
-          <span class="logo-sub">Hair Transplant</span>
-        </span>
-        <p>Houston-based concierge for premium European hair restoration. Restore confidence. Travel smart.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <div class="footer-links">
-          <a href="#why">Why Europe</a>
-          <a href="#treatments">Treatments</a>
-          <a href="#how">How It Works</a>
-          <a href="#travel">Travel Support</a>
-          <a href="#faq">FAQs</a>
-        </div>
-      </div>
-      <div>
-        <h4>Treatments</h4>
-        <div class="footer-links">
-          <a href="#treatments">FUE Hair Transplant</a>
-          <a href="#treatments">DHI Hair Transplant</a>
-          <a href="#treatments">Hairline Restoration</a>
-          <a href="#treatments">Crown Restoration</a>
-          <a href="#treatments">Beard Transplant</a>
-        </div>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <div class="footer-contact">
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Houston, Texas<br/>Serving clients across Texas &amp; the U.S.</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92V21a1 1 0 0 1-1.1 1A19 19 0 0 1 2 4.1 1 1 0 0 1 3 3h4.1a1 1 0 0 1 1 .75c.13.55.32 1.09.55 1.6a1 1 0 0 1-.23 1.1L7 8a16 16 0 0 0 9 9l1.55-1.4a1 1 0 0 1 1.1-.23c.51.23 1.05.42 1.6.55a1 1 0 0 1 .75 1z"/></svg>
-            <a href="tel:+17135550100">(713) 555-0100</a>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-            <a href="mailto:hello@eurohairtransplant.com">hello@eurohairtransplant.com</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Euro Hair Transplant. All rights reserved. Demo site for proposal review.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2zM17.5 6.5h.01"/></svg>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-// ============ Sticky header ============
-(function(){
-  const header = document.getElementById('header');
-  const onScroll = () => {
-    if(window.scrollY > 60) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
-
-// ============ Mobile nav ============
-(function(){
-  const toggle = document.getElementById('menuToggle');
-  const panel = document.getElementById('mobileNav');
-  if(!toggle || !panel) return;
-  const close = () => {
-    toggle.classList.remove('open');
-    panel.classList.remove('open');
-    panel.setAttribute('aria-hidden','true');
-    toggle.setAttribute('aria-expanded','false');
-  };
-  toggle.addEventListener('click', () => {
-    const open = panel.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  panel.querySelectorAll('.mn-link').forEach(a => a.addEventListener('click', close));
-})();
-
-// ============ Reveal on scroll ============
-(function(){
-  const els = document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)){
-    els.forEach(el => el.classList.add('visible'));
-    return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  els.forEach(el => io.observe(el));
-})();
-
-// ============ FAQ accordion ============
-(function(){
-  const items = document.querySelectorAll('.faq-item');
-  items.forEach(item => {
-    const btn = item.querySelector('.faq-q');
-    const ans = item.querySelector('.faq-a');
-    btn.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
-      items.forEach(i => {
-        i.classList.remove('open');
-        const a = i.querySelector('.faq-a');
-        a.style.maxHeight = null;
-      });
-      if(!isOpen){
-        item.classList.add('open');
-        ans.style.maxHeight = ans.scrollHeight + 'px';
-      }
-    });
-  });
-})();
-
-// ============ Form (demo) ============
-(function(){
-  const form = document.getElementById('consultForm');
-  if(!form) return;
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    const original = btn.innerHTML;
-    btn.innerHTML = 'Thank you — we\'ll be in touch shortly ✓';
-    btn.style.background = '#0a2a55';
-    btn.disabled = true;
-    setTimeout(() => {
-      form.reset();
-      btn.innerHTML = original;
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3500);
-  });
-})();
-</script>
 
 </body>
 </html>
