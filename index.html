@@ -61,7 +61,7 @@ a{color:inherit;text-decoration:none}
 .intro p{font-size:17px;line-height:1.7;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto}
 
 /* ============ CONCEPTS ============ */
-.concepts{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1320px;margin:0 auto;width:100%}
+.concepts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1320px;margin:0 auto;width:100%}
 .concept-card{
   background:rgba(255,255,255,.025);
   border:1px solid rgba(255,255,255,.08);
@@ -126,7 +126,7 @@ a{color:inherit;text-decoration:none}
   border:1px solid rgba(255,255,255,.15);
 }
 
-.concept-body{padding:40px 40px 36px;display:flex;flex-direction:column;flex:1}
+.concept-body{padding:36px 32px 32px;display:flex;flex-direction:column;flex:1}
 .concept-style{
   font-family:var(--sans);
   font-size:11px;
@@ -138,11 +138,11 @@ a{color:inherit;text-decoration:none}
 }
 .concept-card h2{
   font-family:var(--sans);
-  font-size:30px;
+  font-size:26px;
   font-weight:300;
-  line-height:1.15;
+  line-height:1.18;
   color:var(--white);
-  margin-bottom:18px;
+  margin-bottom:16px;
   letter-spacing:-.01em;
 }
 .concept-card h2 em{
@@ -152,10 +152,10 @@ a{color:inherit;text-decoration:none}
   color:#cbd9ee;
 }
 .concept-desc{
-  font-size:15px;
+  font-size:14px;
   line-height:1.65;
   color:rgba(255,255,255,.65);
-  margin-bottom:28px;
+  margin-bottom:24px;
   font-weight:400;
 }
 .concept-feats{
@@ -257,12 +257,16 @@ a{color:inherit;text-decoration:none}
 .brand-bar{animation:rise .8s var(--ease) both}
 .intro{animation:rise .9s var(--ease) .15s both}
 .concept-card:nth-child(1){animation:rise 1s var(--ease) .3s both}
-.concept-card:nth-child(2){animation:rise 1s var(--ease) .45s both}
-.update-note{animation:rise 1s var(--ease) .6s both}
-.foot{animation:rise 1s var(--ease) .75s both}
+.concept-card:nth-child(2){animation:rise 1s var(--ease) .42s both}
+.concept-card:nth-child(3){animation:rise 1s var(--ease) .54s both}
+.update-note{animation:rise 1s var(--ease) .68s both}
+.foot{animation:rise 1s var(--ease) .8s both}
 
 /* ============ RESPONSIVE ============ */
-@media (max-width:920px){
+@media (max-width:1180px){
+  .concepts{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media (max-width:780px){
   .concepts{grid-template-columns:1fr;gap:24px}
   .intro{margin-bottom:60px}
   .brand-bar{margin-bottom:60px}
@@ -299,8 +303,8 @@ a{color:inherit;text-decoration:none}
 
   <section class="intro">
     <span class="intro-eyebrow">Concept Selection</span>
-    <h1>Two design directions, <em>one brand.</em></h1>
-    <p>Choose a concept to view a full one-page preview. Both share the same brand identity, content, and structure — they differ in visual tone, typography, and overall feel.</p>
+    <h1>Three design directions, <em>one brand.</em></h1>
+    <p>Choose a concept to view a full one-page preview. All three share the same brand identity and core content — they differ in visual tone and how the value story is told.</p>
   </section>
 
   <main class="concepts">
@@ -314,12 +318,11 @@ a{color:inherit;text-decoration:none}
       <div class="concept-body">
         <div class="concept-style">Editorial · Hospitality</div>
         <h2>Luxury hospitality, <em>European editorial.</em></h2>
-        <p class="concept-desc">A cinematic, magazine-inspired direction — large serif italic accents, deep navy hero, and refined editorial spacing. Reads like a premium hospitality brand (Aman, Six Senses).</p>
+        <p class="concept-desc">A cinematic, magazine-inspired direction — large serif italic accents, deep navy hero, and refined editorial spacing. Reads like a premium hospitality brand.</p>
         <div class="concept-feats">
           <span class="concept-feat">Cinematic Hero</span>
-          <span class="concept-feat">Serif Italic Accents</span>
+          <span class="concept-feat">Serif Accents</span>
           <span class="concept-feat">Editorial Layout</span>
-          <span class="concept-feat">Warm &amp; Refined</span>
         </div>
         <span class="concept-cta">View Concept A <span class="arrow">→</span></span>
       </div>
@@ -329,19 +332,37 @@ a{color:inherit;text-decoration:none}
       <div class="concept-thumb">
         <img src="Images/before and after hair restoration turkey.jpg" alt="Modern clinical luxury preview — before and after" />
         <span class="concept-letter">B</span>
-        <span class="concept-tag">Latest · Feedback Applied</span>
+        <span class="concept-tag">Iteration 2</span>
       </div>
       <div class="concept-body">
         <div class="concept-style">Modern · Clinical Luxury</div>
         <h2>Confident clinical, <em>results-led.</em></h2>
-        <p class="concept-desc">A bolder, more structured direction — leads with before/after results, sharper typography, and a brighter, more contemporary feel. Closer to a premium aesthetic-clinic brand.</p>
+        <p class="concept-desc">A bolder, more structured direction — leads with before/after results, sharper typography, and a brighter contemporary feel. Premium aesthetic-clinic energy.</p>
         <div class="concept-feats">
           <span class="concept-feat">Before/After Hero</span>
           <span class="concept-feat">Bold Typography</span>
           <span class="concept-feat">Stat-Driven</span>
-          <span class="concept-feat">Brighter &amp; Crisp</span>
         </div>
         <span class="concept-cta">View Concept B <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <a href="option-3.html" class="concept-card" aria-label="View Concept C">
+      <div class="concept-thumb">
+        <img src="Images/before and after hair restoration turkey.jpg" alt="All-inclusive concept preview" />
+        <span class="concept-letter">C</span>
+        <span class="concept-tag">Latest · Feedback Applied</span>
+      </div>
+      <div class="concept-body">
+        <div class="concept-style">All-Inclusive · Pricing-Led</div>
+        <h2>One price. <em>Everything included.</em></h2>
+        <p class="concept-desc">Same modern direction as B, but built around the all-inclusive value story — side-by-side comparison vs. typical U.S. providers showing flights, hotel and transfers in one transparent price.</p>
+        <div class="concept-feats">
+          <span class="concept-feat">All-Inclusive Hook</span>
+          <span class="concept-feat">Side-by-Side Compare</span>
+          <span class="concept-feat">Package Strip</span>
+        </div>
+        <span class="concept-cta">View Concept C <span class="arrow">→</span></span>
       </div>
     </a>
 
@@ -353,7 +374,7 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="update-note-text">
       <div class="update-note-title">Client Feedback Status</div>
-      <p><strong style="color:rgba(255,255,255,.85);font-weight:600">Concept A</strong> is the original draft (preserved as-is for reference). <strong style="color:rgba(255,255,255,.85);font-weight:600">Concept B</strong> incorporates the latest round of feedback — Eiffel Tower removed, no Turkey references, before/after imagery in the hero, and a fresh visual direction to compare against.</p>
+      <p><strong style="color:rgba(255,255,255,.85);font-weight:600">Concept A</strong> is the original draft (preserved as-is). <strong style="color:rgba(255,255,255,.85);font-weight:600">Concept B</strong> applies the second round of feedback — Eiffel Tower removed, no Turkey references, before/after imagery in the hero. <strong style="color:rgba(255,255,255,.85);font-weight:600">Concept C</strong> is the latest — a side-by-side comparison vs. typical U.S. providers showing the all-inclusive package (procedure + flights + hotel + transfers in one price).</p>
     </div>
   </aside>
 
