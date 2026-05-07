@@ -242,7 +242,9 @@ p{font-size:16px;line-height:1.7;color:#475569}
 .compare-us .compare-tag{color:var(--royal)}
 .compare-head h3{font-size:22px;font-weight:700;margin-bottom:24px;color:var(--navy)}
 .compare-price{display:flex;flex-direction:column;gap:6px}
-.compare-price-num{font-family:var(--sans);font-size:44px;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1}
+.compare-price-num{font-family:var(--sans);font-size:44px;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1;display:inline-flex;align-items:baseline;gap:6px}
+.compare-price-num .per-unit{font-size:18px;font-weight:600;color:var(--royal);letter-spacing:0;line-height:1}
+.compare-price-from{display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--royal);margin-bottom:8px}
 .compare-them .compare-price-num{color:#64748b;text-decoration:line-through;text-decoration-color:rgba(100,116,139,.4);text-decoration-thickness:2px}
 .compare-us .compare-price-num{color:var(--royal)}
 .compare-price-sub{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em}
@@ -277,6 +279,25 @@ p{font-size:16px;line-height:1.7;color:#475569}
 .compare-savings-num{font-family:var(--sans);font-size:48px;font-weight:800;letter-spacing:-.02em;line-height:1;color:var(--white)}
 .compare-savings-meta{font-family:var(--sans);font-size:14px;color:rgba(255,255,255,.85);max-width:280px;line-height:1.5}
 .compare-disc{margin-top:32px;font-size:11px;color:var(--muted);font-style:italic;text-align:center;line-height:1.7;max-width:780px;margin-left:auto;margin-right:auto}
+
+/* ============ SPECIALTIES ============ */
+.specialties{background:var(--cream)}
+.specialties-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:60px}
+.specialty{background:var(--white);border-radius:var(--r-lg);border:1px solid var(--line);padding:40px 36px 36px;display:flex;flex-direction:column;gap:18px;transition:all .45s var(--ease);position:relative;overflow:hidden}
+.specialty::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--royal);transition:width .55s var(--ease)}
+.specialty:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--royal)}
+.specialty:hover::before{width:100%}
+.specialty-icon{width:56px;height:56px;border-radius:50%;background:rgba(0,87,184,.1);color:var(--royal);display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.specialty-icon svg{width:26px;height:26px}
+.specialty-tag{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--royal);display:inline-block}
+.specialty h3{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:0;line-height:1.25}
+.specialty p{font-size:14.5px;line-height:1.65;color:#475569;flex:1;margin:0}
+.specialty-foot{padding-top:22px;border-top:1px solid var(--line);margin-top:auto;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.specialty-price{font-family:var(--sans);font-size:32px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+.specialty-price .per-unit{font-size:14px;font-weight:600;color:var(--royal);margin-left:4px;letter-spacing:0}
+.specialty-feature{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--navy);line-height:1.3;display:flex;align-items:center;gap:10px}
+.specialty-feature svg{width:18px;height:18px;color:var(--royal);flex-shrink:0}
+.specialty-meta{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px;width:100%}
 
 /* ============ INCLUDED STRIP ============ */
 .included-strip{background:var(--cream);padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -476,6 +497,7 @@ p{font-size:16px;line-height:1.7;color:#475569}
 @media (max-width:1080px){
   .hero-grid,.why-grid,.cost-grid,.exp-grid,.travel-grid,.local-grid,.form-grid,.faq-grid{grid-template-columns:1fr;gap:60px}
   .compare-grid{grid-template-columns:1fr;gap:32px}
+  .specialties-grid{grid-template-columns:1fr;gap:20px}
   .compare-vs{width:100%;height:40px;flex-direction:row}
   .compare-vs::before,.compare-vs::after{top:50%;transform:translateY(-50%);height:1px;width:calc(50% - 24px)}
   .compare-vs::before{left:0}
@@ -663,6 +685,11 @@ p{font-size:16px;line-height:1.7;color:#475569}
     </div>
     <div class="trust-strip-divider"></div>
     <div class="trust-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h12M9 3v2M11 19c-1.5-1.5-3-3.5-3-6 0-2.5 1.5-4 3-4M21 21l-5-12-5 12M14 17h4"/></svg>
+      Hablamos Español
+    </div>
+    <div class="trust-strip-divider"></div>
+    <div class="trust-mark">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       European Clinic Network
     </div>
@@ -817,8 +844,9 @@ p{font-size:16px;line-height:1.7;color:#475569}
           <span class="compare-tag">Euro Hair Transplant</span>
           <h3>Complete Concierge Package</h3>
           <div class="compare-price">
-            <span class="compare-price-num">$5,800</span>
-            <span class="compare-price-sub">approx. 3,000 grafts · all-in, one price</span>
+            <span class="compare-price-from">As low as</span>
+            <span class="compare-price-num">$2.97<span class="per-unit">/ graft</span></span>
+            <span class="compare-price-sub">all-inclusive · per graft pricing</span>
           </div>
         </div>
         <ul class="compare-list">
@@ -865,11 +893,11 @@ p{font-size:16px;line-height:1.7;color:#475569}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
         <div class="compare-savings-text">
-          <span class="compare-savings-label">Your Total Savings</span>
-          <span class="compare-savings-num">~$8,700+</span>
+          <span class="compare-savings-label">All-Inclusive · From</span>
+          <span class="compare-savings-num">$2.97 <span style="font-size:24px;font-weight:600;color:#cbd9ee;letter-spacing:.04em">/ graft</span></span>
         </div>
       </div>
-      <div class="compare-savings-meta">vs. a typical U.S. provider — and the European trip is already part of your package.</div>
+      <div class="compare-savings-meta">Compared to roughly $4–5 per graft for procedure-only U.S. pricing — flights, hotel, transfers and concierge are already in your number.</div>
     </div>
 
     <p class="compare-disc">Illustrative figures based on publicly available U.S. competitor pricing and average European partner clinic costs. Actual pricing varies by graft count, technique, clinic selection, travel season, and individual case. Final figures confirmed during your free Houston consultation.</p>
@@ -1240,6 +1268,65 @@ p{font-size:16px;line-height:1.7;color:#475569}
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIALTIES ============ -->
+<section class="section specialties">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center"><span class="dot"></span>Built for You</span>
+      <h2 style="margin-top:18px">Specialized care.<br/>Right here in Houston.</h2>
+      <p class="lead" style="margin:18px auto 0">Beyond the European procedure, our Houston team offers specialized services and support designed to fit you — your hair, your language, and your recovery.</p>
+    </div>
+    <div class="specialties-grid">
+
+      <article class="specialty reveal">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M19.07 4.93l-2.12 2.12M7.05 16.95l-2.12 2.12M19.07 19.07l-2.12-2.12M7.05 7.05L4.93 4.93"/></svg>
+        </div>
+        <span class="specialty-tag">Houston Add-On</span>
+        <h3>Red Light Therapy Sessions</h3>
+        <p>Photobiomodulation sessions to support hair regrowth, scalp health, and recovery — performed at our Houston location, before or after your European procedure.</p>
+        <div class="specialty-foot">
+          <span class="specialty-price">$97<span class="per-unit">/ session</span></span>
+          <span class="specialty-meta">Houston, Texas · By appointment</span>
+        </div>
+      </article>
+
+      <article class="specialty reveal reveal-d1">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 2 5 5 5 9c0 2 1 3 1 5 0 2-1 3-1 5h12c0-2-1-3-1-5 0-2 1-3 1-5 0-4-3-7-5-7zM8 14c.5-1 1-2 0-3M16 14c-.5-1-1-2 0-3M10 11c.3-.8.6-1.6 0-2.4M14 11c-.3-.8-.6-1.6 0-2.4"/></svg>
+        </div>
+        <span class="specialty-tag">Specialist Care</span>
+        <h3>Afro &amp; Textured Hair Restoration</h3>
+        <p>Our European partner surgeons are specifically experienced with Afro, coily, and textured hair — including the curved-follicle technique required for natural-looking, density-rich results.</p>
+        <div class="specialty-foot">
+          <span class="specialty-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+            Specialist Surgeon Match
+          </span>
+          <span class="specialty-meta">Included with every consultation</span>
+        </div>
+      </article>
+
+      <article class="specialty reveal reveal-d2">
+        <div class="specialty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <span class="specialty-tag">Bilingual Service</span>
+        <h3>Hablamos Español</h3>
+        <p>Full Spanish-language consultations, coordination, and concierge support — desde tu primera reunión en Houston hasta cada paso en Europa. Tu equipo bilingüe te acompaña.</p>
+        <div class="specialty-foot">
+          <span class="specialty-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+            Sí · Consultas en Español
+          </span>
+          <span class="specialty-meta">Inglés &amp; Español · 100% bilingual</span>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
