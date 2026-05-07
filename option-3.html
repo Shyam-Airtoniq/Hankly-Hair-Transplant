@@ -229,6 +229,8 @@ p{font-size:16px;line-height:1.7;color:#475569}
 
 /* ============ ALL-INCLUSIVE COMPARE ============ */
 .compare-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:stretch;margin-top:24px}
+.compare-card-wrap{position:relative;display:flex;flex-direction:column;height:100%}
+.compare-card-wrap .compare-col{flex:1;width:100%}
 .compare-col{background:var(--white);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;position:relative;transition:all .5s var(--ease)}
 .compare-them{opacity:.92}
 .compare-them:hover{opacity:1}
@@ -790,7 +792,8 @@ p{font-size:16px;line-height:1.7;color:#475569}
     <div class="compare-grid">
 
       <!-- Competitor column -->
-      <div class="compare-col compare-them reveal">
+      <div class="compare-card-wrap reveal">
+      <div class="compare-col compare-them">
         <div class="compare-head">
           <span class="compare-tag">Typical U.S. Provider</span>
           <h3>Procedure-Only Price</h3>
@@ -833,13 +836,15 @@ p{font-size:16px;line-height:1.7;color:#475569}
         </ul>
         <div class="compare-foot">+ travel, lodging &amp; logistics on you</div>
       </div>
+      </div>
 
       <!-- VS divider -->
       <div class="compare-vs">VS</div>
 
       <!-- Our column -->
-      <div class="compare-col compare-us reveal reveal-d1">
-        <div class="compare-badge">All-Inclusive</div>
+      <div class="compare-card-wrap reveal reveal-d1">
+      <div class="compare-badge">All-Inclusive</div>
+      <div class="compare-col compare-us">
         <div class="compare-head">
           <span class="compare-tag">Euro Hair Transplant</span>
           <h3>Complete Concierge Package</h3>
@@ -882,6 +887,7 @@ p{font-size:16px;line-height:1.7;color:#475569}
           </li>
         </ul>
         <div class="compare-foot">One price. One trip. No surprises.</div>
+      </div>
       </div>
 
     </div>
