@@ -279,6 +279,36 @@ p{font-size:16px;line-height:1.7;color:#475569}
 .compare-savings-meta{font-family:var(--sans);font-size:14px;color:rgba(255,255,255,.85);max-width:280px;line-height:1.5}
 .compare-disc{margin-top:32px;font-size:11px;color:var(--muted);font-style:italic;text-align:center;line-height:1.7;max-width:780px;margin-left:auto;margin-right:auto}
 
+/* ============ COMPARE — VISIT-FOR-PRICING CTA ============ */
+.compare-pricing-cta{display:flex;flex-direction:column;gap:10px}
+.compare-cta-head{font-family:var(--sans);font-size:24px;font-weight:700;color:var(--navy);letter-spacing:-.01em;line-height:1.2;margin:0}
+.compare-cta-sub{font-family:var(--sans);font-size:14.5px;font-weight:500;color:#475569;line-height:1.55;margin:0}
+.compare-cta-btn{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:12px 20px;background:var(--royal);color:#fff;border-radius:var(--r-pill);font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.06em;align-self:flex-start;transition:all .3s var(--ease)}
+.compare-cta-btn:hover{background:var(--navy);transform:translateY(-1px);box-shadow:0 12px 28px -8px rgba(0,87,184,.5)}
+.compare-savings-card .btn-savings{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:var(--r-pill);font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.06em;transition:all .3s var(--ease);flex-shrink:0}
+.compare-savings-card .btn-savings:hover{background:#fff;color:var(--royal);border-color:#fff}
+
+/* ============ DUBAI ADD-ON BANNER ============ */
+.dubai{position:relative;padding:140px 0;overflow:hidden;color:#fff;background:linear-gradient(135deg,#0a2a55,#002147)}
+.dubai-bg{position:absolute;inset:0;z-index:0}
+.dubai-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(0,33,71,.86) 0%,rgba(0,33,71,.6) 45%,rgba(0,33,71,.35) 100%);z-index:1}
+.dubai-bg img{width:100%;height:100%;object-fit:cover;animation:dubaiZoom 24s ease-out infinite alternate}
+@keyframes dubaiZoom{0%{transform:scale(1.03)}100%{transform:scale(1.1)}}
+.dubai-content{position:relative;z-index:2;max-width:720px}
+.dubai-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:var(--r-pill);background:rgba(255,255,255,.12);backdrop-filter:blur(10px);color:#fff;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:28px;border:1px solid rgba(255,255,255,.18)}
+.dubai-tag-dot{width:7px;height:7px;border-radius:50%;background:#7ea7d8;box-shadow:0 0 0 4px rgba(126,167,216,.2);animation:pulse 2.4s ease-in-out infinite}
+.dubai h2{color:#fff;margin-bottom:22px;font-size:clamp(38px,4.6vw,62px);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+.dubai h2 em{font-style:normal;color:#7ea7d8;font-weight:700}
+.dubai-lead{color:rgba(255,255,255,.85);font-size:18px;line-height:1.65;max-width:540px;margin:0}
+.dubai-row{margin-top:44px;display:flex;align-items:flex-end;gap:48px;flex-wrap:wrap;padding-top:36px;border-top:1px solid rgba(255,255,255,.18)}
+.dubai-price{display:flex;flex-direction:column;gap:4px}
+.dubai-price-from{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#7ea7d8;margin-bottom:4px}
+.dubai-price-num{font-family:var(--sans);font-size:60px;font-weight:800;color:#fff;line-height:.95;letter-spacing:-.02em;display:inline-flex;align-items:baseline;gap:8px}
+.dubai-price-num .per{font-size:18px;font-weight:600;color:rgba(255,255,255,.7);letter-spacing:.02em}
+.dubai-price-sub{font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.7);margin-top:8px}
+.dubai-cta{display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:#fff;color:var(--navy);border-radius:var(--r-pill);font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.04em;transition:all .3s var(--ease);border:1.5px solid #fff}
+.dubai-cta:hover{background:var(--royal);color:#fff;border-color:var(--royal);transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(0,87,184,.5)}
+
 /* ============ SPECIALTIES ============ */
 .specialties{background:var(--cream)}
 .specialties-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:60px}
@@ -520,6 +550,11 @@ p{font-size:16px;line-height:1.7;color:#475569}
 @media (max-width:768px){
   .container{padding:0 22px}
   .section{padding:80px 0}
+  .dubai{padding:90px 0}
+  .dubai-price-num{font-size:46px}
+  .dubai-row{gap:24px}
+  .dubai-lead{font-size:16px}
+  .compare-cta-head{font-size:21px}
   .compare-savings-card{padding:28px 24px;flex-direction:column;text-align:center}
   .compare-savings-block{flex-direction:column;gap:16px}
   .compare-savings-num{font-size:38px}
