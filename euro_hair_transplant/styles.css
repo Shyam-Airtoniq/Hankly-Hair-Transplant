@@ -461,6 +461,25 @@ p{font-size:16px;line-height:1.7;color:#475569}
 .form-submit:hover{background:var(--navy);transform:translateY(-1px);box-shadow:0 14px 30px -8px rgba(0,87,184,.45)}
 .form-fine{margin-top:14px;font-size:11px;color:var(--muted);text-align:center}
 
+/* ============ FORM — FILE UPLOAD ============ */
+.field-hint-inline{font-family:var(--sans);font-size:10px;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:none;margin-left:6px}
+.file-upload{position:relative}
+.file-upload input[type=file]{position:absolute;left:-9999px;opacity:0;width:0;height:0}
+.file-upload-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:20px 22px;border:1.5px dashed var(--line-strong);border-radius:var(--r-md);background:var(--cream);font-family:var(--sans);font-size:13.5px;font-weight:600;color:var(--navy);cursor:pointer;transition:all .3s var(--ease);text-align:center}
+.file-upload-btn:hover,.file-upload-btn.drag{border-color:var(--royal);background:rgba(0,87,184,.06);color:var(--royal);transform:translateY(-1px)}
+.file-upload-btn svg{width:20px;height:20px;color:var(--royal);flex-shrink:0}
+.file-hint{font-family:var(--sans);font-size:11px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em}
+.file-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.file-list:empty{margin-top:0}
+.file-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;background:rgba(0,87,184,.06);border:1px solid rgba(0,87,184,.12);border-radius:var(--r-sm);font-family:var(--sans);font-size:13px;color:var(--navy);animation:fileFadeIn .3s var(--ease)}
+@keyframes fileFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.file-item-name{display:flex;align-items:center;gap:10px;overflow:hidden;flex:1;min-width:0}
+.file-item-name svg{width:16px;height:16px;color:var(--royal);flex-shrink:0}
+.file-item-name span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.file-item-remove{background:none;border:none;color:var(--muted);cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .2s var(--ease);flex-shrink:0}
+.file-item-remove:hover{color:var(--royal);background:rgba(0,87,184,.12)}
+.file-item-remove svg{width:14px;height:14px}
+
 /* ============ FAQ ============ */
 .faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
 .faq-side{position:sticky;top:120px}

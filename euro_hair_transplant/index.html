@@ -899,10 +899,12 @@
         </div>
       </div>
       <div class="form-card reveal reveal-d1">
-        <h3>Schedule Your Visit</h3>
-        <p class="form-card-sub">We'll respond within one business day to confirm your preferred time.</p>
-        <!-- WORDPRESS NOTE: Replace this form with Gravity Forms / WPForms / CF7. Field names below match the labels below. -->
-        <form id="consultForm" novalidate>
+        <h3>Send Us Your Info</h3>
+        <p class="form-card-sub">We'll give you a call within one business day to walk through your options.</p>
+        <!-- WORDPRESS NOTE: WP dev will wire this form to HighLevel (CRM lead + SMS/email
+             notification to client). Field names: fullName, phone, email, photos[].
+             Photo upload allows up to 3 image files. -->
+        <form id="consultForm" novalidate enctype="multipart/form-data">
           <div class="form-row">
             <div class="field">
               <label for="fullName">Full Name</label>
@@ -919,27 +921,22 @@
               <input id="email" type="email" name="email" placeholder="you@email.com" required />
             </div>
           </div>
-          <div class="form-row two">
-            <div class="field">
-              <label for="day">Preferred Day</label>
-              <select id="day" name="day">
-                <option value="">Select a day</option>
-                <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
-                <option>Thursday</option><option>Friday</option><option>Saturday</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="time">Preferred Time</label>
-              <select id="time" name="time">
-                <option value="">Select a time</option>
-                <option>Morning (9–12)</option>
-                <option>Afternoon (12–4)</option>
-                <option>Evening (4–7)</option>
-              </select>
+          <div class="form-row">
+            <div class="field field-files">
+              <label for="photos">Photos <span class="field-hint-inline">(optional, up to 3)</span></label>
+              <div class="file-upload">
+                <input id="photos" type="file" name="photos[]" accept="image/*" multiple />
+                <label for="photos" class="file-upload-btn" id="fileUploadBtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                  <span>Choose photos or drop them here</span>
+                </label>
+                <p class="file-hint">JPG or PNG. Up to 3 images.</p>
+                <div class="file-list" id="fileList"></div>
+              </div>
             </div>
           </div>
-          <button type="submit" class="form-submit">Schedule My Consultation <span class="arrow">→</span></button>
-          <p class="form-fine">Your information is kept private and used only for consultation scheduling.</p>
+          <button type="submit" class="form-submit">Submit My Inquiry <span class="arrow">→</span></button>
+          <p class="form-fine">Your information is kept private and used only to schedule your visit.</p>
         </form>
       </div>
     </div>
