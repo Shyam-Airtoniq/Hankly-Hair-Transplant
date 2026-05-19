@@ -298,7 +298,21 @@ p{font-size:16px;line-height:1.7;color:#475569}
 .dubai-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(0,33,71,.86) 0%,rgba(0,33,71,.6) 45%,rgba(0,33,71,.35) 100%);z-index:1}
 .dubai-bg img{width:100%;height:100%;object-fit:cover;animation:dubaiZoom 24s ease-out infinite alternate}
 @keyframes dubaiZoom{0%{transform:scale(1.03)}100%{transform:scale(1.1)}}
-.dubai-content{position:relative;z-index:2;max-width:720px}
+.dubai-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:2}
+.dubai-content{position:relative;z-index:2}
+.dubai-card{background:rgba(255,255,255,.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-lg);padding:36px;position:relative;z-index:2;box-shadow:0 24px 60px -20px rgba(0,0,0,.4)}
+.dubai-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:14px}
+.dubai-card-title{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#7ea7d8}
+.dubai-card-meta{font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.55);font-style:italic}
+.dubai-highlights{display:flex;flex-direction:column;gap:0;list-style:none;padding:0;margin:0}
+.dubai-highlights li{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.dubai-highlights li:first-child{padding-top:0}
+.dubai-highlights li:last-child{border-bottom:none;padding-bottom:0}
+.dubai-highlights .dh-icon{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(255,255,255,.12)}
+.dubai-highlights .dh-icon svg{width:18px;height:18px}
+.dubai-highlights .dh-body{flex:1;min-width:0}
+.dubai-highlights strong{display:block;font-family:var(--sans);font-size:14.5px;font-weight:700;color:#fff;margin-bottom:3px;line-height:1.3}
+.dubai-highlights p{font-family:var(--sans);font-size:12.5px;font-weight:500;color:rgba(255,255,255,.7);line-height:1.5;margin:0}
 .dubai-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:var(--r-pill);background:rgba(255,255,255,.12);backdrop-filter:blur(10px);color:#fff;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:28px;border:1px solid rgba(255,255,255,.18)}
 .dubai-tag-dot{width:7px;height:7px;border-radius:50%;background:#7ea7d8;box-shadow:0 0 0 4px rgba(126,167,216,.2);animation:pulse 2.4s ease-in-out infinite}
 .dubai h2{color:#fff;margin-bottom:22px;font-size:clamp(38px,4.6vw,62px);font-weight:700;line-height:1.05;letter-spacing:-.02em}
@@ -550,6 +564,7 @@ p{font-size:16px;line-height:1.7;color:#475569}
   .hero-grid,.why-grid,.cost-grid,.exp-grid,.travel-grid,.local-grid,.form-grid,.faq-grid{grid-template-columns:1fr;gap:60px}
   .compare-grid{grid-template-columns:1fr;gap:32px}
   .specialties-grid{grid-template-columns:1fr;gap:20px}
+  .dubai-grid{grid-template-columns:1fr;gap:48px}
   .compare-vs{width:100%;height:40px;flex-direction:row}
   .compare-vs::before,.compare-vs::after{top:50%;transform:translateY(-50%);height:1px;width:calc(50% - 24px)}
   .compare-vs::before{left:0}
@@ -577,6 +592,10 @@ p{font-size:16px;line-height:1.7;color:#475569}
   .dubai-price-num{font-size:46px}
   .dubai-row{gap:24px}
   .dubai-lead{font-size:16px}
+  .dubai-card{padding:26px 22px}
+  .dubai-highlights .dh-icon{width:34px;height:34px}
+  .dubai-highlights strong{font-size:13.5px}
+  .dubai-highlights p{font-size:12px}
   .compare-cta-head{font-size:21px}
   .compare-savings-card{padding:28px 24px;flex-direction:column;text-align:center}
   .compare-savings-block{flex-direction:column;gap:16px}
@@ -1251,18 +1270,56 @@ p{font-size:16px;line-height:1.7;color:#475569}
     <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80" alt="Dubai skyline at golden hour" onerror="this.style.display='none'" />
   </div>
   <div class="container">
-    <div class="dubai-content reveal">
-      <span class="dubai-tag"><span class="dubai-tag-dot"></span>Premium Add-On · Limited Availability</span>
-      <h2>One week in <em>Dubai.</em></h2>
-      <p class="dubai-lead">Extend your hair restoration trip with a luxury Dubai escape — five-star hotels, world-class dining, desert adventures, and an unforgettable layover before or after your European procedure.</p>
-      <div class="dubai-row">
-        <div class="dubai-price">
-          <span class="dubai-price-from">Starting at</span>
-          <span class="dubai-price-num">$997<span class="per">/ person</span></span>
-          <span class="dubai-price-sub">7 nights · double occupancy · hotel &amp; transfers included</span>
+    <div class="dubai-grid">
+      <div class="dubai-content reveal">
+        <span class="dubai-tag"><span class="dubai-tag-dot"></span>Premium Add-On · Limited Availability</span>
+        <h2>One week in <em>Dubai.</em></h2>
+        <p class="dubai-lead">Extend your hair restoration trip with a luxury Dubai escape — five-star hotels, world-class dining, desert adventures, and an unforgettable layover before or after your European procedure.</p>
+        <div class="dubai-row">
+          <div class="dubai-price">
+            <span class="dubai-price-from">Starting at</span>
+            <span class="dubai-price-num">$997<span class="per">/ person</span></span>
+            <span class="dubai-price-sub">7 nights · double occupancy · hotel &amp; transfers included</span>
+          </div>
+          <a href="#consult" class="dubai-cta">Book a Consultation <span>→</span></a>
         </div>
-        <a href="#consult" class="dubai-cta">Add Dubai to My Trip <span>→</span></a>
       </div>
+      <aside class="dubai-card reveal reveal-d1">
+        <div class="dubai-card-head">
+          <span class="dubai-card-title">Trip Highlights</span>
+          <span class="dubai-card-meta">included with package</span>
+        </div>
+        <ul class="dubai-highlights">
+          <li>
+            <span class="dh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></span>
+            <div class="dh-body">
+              <strong>Five-Star Hotel Stay</strong>
+              <p>Centrally located luxury hotel, double occupancy, daily breakfast included</p>
+            </div>
+          </li>
+          <li>
+            <span class="dh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h.01M14 9h.01M10 13h.01M14 13h.01M10 17h.01M14 17h.01"/></svg></span>
+            <div class="dh-body">
+              <strong>Iconic City Experiences</strong>
+              <p>Burj Khalifa, Palm Jumeirah, Dubai Marina &amp; Old Town tours</p>
+            </div>
+          </li>
+          <li>
+            <span class="dh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M19.07 4.93l-2.12 2.12M7.05 16.95l-2.12 2.12M19.07 19.07l-2.12-2.12M7.05 7.05L4.93 4.93"/></svg></span>
+            <div class="dh-body">
+              <strong>Desert Safari &amp; Dinner</strong>
+              <p>Premium dune drive, sunset views and an authentic Bedouin-style dinner</p>
+            </div>
+          </li>
+          <li>
+            <span class="dh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M6 6V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg></span>
+            <div class="dh-body">
+              <strong>All Airport &amp; Hotel Transfers</strong>
+              <p>Private pickup, ground transport between every leg of the trip</p>
+            </div>
+          </li>
+        </ul>
+      </aside>
     </div>
   </div>
 </section>
