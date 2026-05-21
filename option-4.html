@@ -479,6 +479,19 @@ p{font-size:16px;line-height:1.7;color:#475569}
 .form-submit:hover{background:var(--navy);transform:translateY(-1px);box-shadow:0 14px 30px -8px rgba(0,87,184,.45)}
 .form-fine{margin-top:14px;font-size:11px;color:var(--muted);text-align:center}
 
+/* ============ FORM — CONSULTANT CARD ============ */
+.consultant-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;display:flex;gap:20px;align-items:center;margin-top:36px;transition:all .4s var(--ease);box-shadow:var(--shadow-sm)}
+.consultant-card:hover{border-color:var(--royal);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.consultant-photo{width:96px;height:96px;border-radius:50%;overflow:hidden;flex-shrink:0;position:relative;background:var(--cream);border:3px solid var(--white);box-shadow:0 0 0 1px var(--line),0 8px 20px -6px rgba(0,33,71,.18)}
+.consultant-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.consultant-body{flex:1;min-width:0}
+.consultant-label{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--royal);display:inline-flex;align-items:center;gap:8px;margin-bottom:10px}
+.consultant-label::before{content:"";width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.25);flex-shrink:0}
+.consultant-title{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--navy);margin:0 0 8px;line-height:1.3}
+.consultant-bio{font-family:var(--sans);font-size:13px;line-height:1.55;color:#475569;margin:0 0 12px}
+.consultant-meta{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.04em;color:var(--muted)}
+.consultant-meta .dot-sep{opacity:.5}
+
 /* ============ FORM — FILE UPLOAD ============ */
 .field-hint-inline{font-family:var(--sans);font-size:10px;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:none;margin-left:6px}
 .file-upload{position:relative}
@@ -636,6 +649,10 @@ p{font-size:16px;line-height:1.7;color:#475569}
   .carriers{grid-template-columns:1fr}
   .form-card{padding:36px 28px}
   .form-row.two{grid-template-columns:1fr}
+  .consultant-card{padding:18px;gap:14px}
+  .consultant-photo{width:72px;height:72px}
+  .consultant-title{font-size:15px}
+  .consultant-bio{font-size:12.5px}
   .footer-grid{grid-template-columns:1fr;gap:32px;margin-bottom:40px;padding-bottom:30px}
   .footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}
   .final-cta{padding:90px 0}
@@ -1552,18 +1569,19 @@ p{font-size:16px;line-height:1.7;color:#475569}
         <span class="eyebrow"><span class="dot"></span>Free Consultation</span>
         <h2 style="margin-top:18px">Book your free<br/>in-person consultation.</h2>
         <p class="lead" style="margin-top:18px">Meet with our Houston team to discuss treatment options, pricing, savings potential, travel coordination, and your next steps — all in a no-pressure environment.</p>
-        <div class="form-perks">
-          <div class="form-perk">
-            <span class="form-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <span class="form-perk-text">Free Consultation — No Obligation</span>
+        <div class="consultant-card">
+          <div class="consultant-photo">
+            <img src="Images/consultant.png" alt="FUE/DHI Medical Tourism Consultant" />
           </div>
-          <div class="form-perk">
-            <span class="form-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <span class="form-perk-text">Meet Locally in Houston, Texas</span>
-          </div>
-          <div class="form-perk">
-            <span class="form-perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <span class="form-perk-text">Transparent Pricing &amp; Savings</span>
+          <div class="consultant-body">
+            <span class="consultant-label">Meet Your Consultant</span>
+            <h3 class="consultant-title">FUE/DHI Medical Tourism Consultant</h3>
+            <p class="consultant-bio">Your dedicated point of contact from your first call through every step of your trip.</p>
+            <div class="consultant-meta">
+              <span>Houston, TX</span>
+              <span class="dot-sep">·</span>
+              <span>Inglés / Español</span>
+            </div>
           </div>
         </div>
       </div>
